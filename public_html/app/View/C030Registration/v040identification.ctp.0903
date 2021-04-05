@@ -1,0 +1,456 @@
+<?php $this->Html->script( 'jquery-1.8.2.min.js', array( 'inline' => false ) ); ?>
+<?php $this->Html->script( 'jquery.common.js'    , array( 'inline' => false ) ); ?>
+
+<?php $this->Html->scriptStart(array('inline' => false)); ?>
+ function buttonClick(eventId) {
+	document.getElementById('<?php echo HIDDEN_ID_000000010 ?>').value = eventId;
+	document.form.submit();
+ }
+ $(document).ready(function() {
+	$('#<?php echo OBJECT_ID_BTN000010 ?>').lockScreen('<?php echo HIDDEN_ID_000000010 ?>');
+	$('#<?php echo OBJECT_ID_BTN000020 ?>').lockScreen('<?php echo HIDDEN_ID_000000010 ?>');
+ });
+
+function bodyOnload() {
+}
+<?php $this->Html->scriptEnd(); ?>
+
+<?php $this->Html->scriptStart(array('inline' => false, 'block' => 'footer')); ?>
+// File APIのType、及びファイルヘッダをチェックしてMIMEタイプを取得する。
+function getImageHeaderFormat(arrayBuffer){
+	'use strict';
+	var arr = new Uint8Array(arrayBuffer).subarray(0, 32);
+	var header = '';
+	for(var i = 0; i < arr.length; i++) {
+		header += arr[i].toString(16);
+	}
+	switch (true) {
+		case header.startsWith('89504e47'):
+			return 'image/png';
+		case header.startsWith('47494638'):
+			return 'image/gif';
+		case header.startsWith('ffd8ff'):
+			return 'image/jpeg';
+		default:
+			return 'unknown format';
+	}
+}
+
+// Base64の文字列をBlob形式にする
+function base64ToBlob(base64){
+	var base64Data = base64.split(',')[1], // Data URLからBase64のデータ部分のみを取得
+	data = window.atob(base64Data), // base64形式の文字列をデコード
+	buff = new ArrayBuffer(data.length),
+	arr = new Uint8Array(buff),
+	i = 0,
+	dataLen = data.length;
+    // blobの生成
+	for (i = 0; i < dataLen; i++){
+		arr[i] = data.charCodeAt(i);
+	}
+	return new Blob([arr], {type: 'image/jpeg'});
+}
+
+// ブラウザ上での機能実装チェック
+function browserCheck(){
+	var result = true;
+	
+	// File APIの確認
+	if (window.File){
+		console.log("File APIが実装されてます。");
+	}else{
+		console.error("File APIが実装されていません。");
+		result = false;
+	}
+
+	// FileReader APIの確認
+	if (window.FileReader){
+		console.log("FileReader APIが実装されてます。");
+	}else{
+		console.error("FileReader APIが実装されていません。");
+		result = false;
+	}
+	
+	// FileReader APIの確認
+	if (window.FileList){
+		console.log("FileList APIが実装されてます。");
+	}else{
+		console.error("FileList APIが実装されていません。");
+		result = false;
+	}
+	
+	// FileReader APIの確認
+	if (window.Blob){
+		console.log("FileBlob APIが実装されてます。");
+	}else{
+		console.error("FileBlob APIが実装されていません。");
+		result = false;
+	}
+
+	// FormFile APIの確認	
+	var el = document.createElement("input");
+	el.type = "file";
+	if(!el.disabled){
+		console.log("FormFile APIが実装されてます。");
+	}else{
+		console.error("FormFile APIが実装されていません。");
+		result = false;
+	}
+
+	// arrayBuffer APIの確認
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', '/', true);
+	try{
+		xhr.responseType = "blob";
+		console.log("XMLHttpRequestにarrayBufferが実装されています。");
+	}catch(e){
+		console.error("XMLHttpRequestにarrayBufferが実装されていません。");
+		result = false;
+	}
+	return result;	
+}
+
+ window.onload = $(function(){
+$(function(){
+	// 悪い例画像表示・非表示ボタン
+	$('.bad_sample_bt').click(function(){
+		$(this).next('.bad_sample').slideToggle('slow');
+	});
+
+	// 各種確認資料備考表示
+	$('select').on('change', function(){
+		// セレクトボックスで選択されている値を取得
+		var valSelected = $(this).val();
+		// セレクトボックスと同じ階層のdiv要素でループ
+		$(this).next('section').children('div').each(function(){
+			// 各div要素にhideクラスを追加し、セレクトボックスで選択されている場合はhideクラスを削除
+			$(this).addClass('hide');
+			if($(this).attr('id') == valSelected){
+				$(this).removeClass('hide');
+			}
+		});
+	});
+
+
+	$('.delete_bt').on('click',function(){
+		var self = $(this),
+        parentBox = self.parent().parent().parent();
+      if(window.confirm('画像を削除します。\nよろしいですか？')){
+        setTimeout(function(){
+          parentBox.find('input[type=file]').val('');
+          parentBox.find('.img_view').remove();
+        } , 0);            
+      }
+      return false;
+    });
+
+
+	//選択画像プレビュー・リサイズ機能
+	$('form').on('change', 'input[type="file"]', function(e) {
+//		const maxFileSize = 3 * 1024 * 1024; // 3MB
+//		const maxUploadSize = maxFileSize; // 3MB
+		var maxFileSize = 3 * 1024 * 1024; // 3MB
+		var maxUploadSize = maxFileSize; // 3MB
+		var file = e.target.files[0],
+		fileType = file.type,
+		fileSize = file.size
+		reader = new FileReader(),
+		image = new Image();
+
+		// 画像ファイルMIMEタイプ(拡張子)の確認
+		if(fileType != 'image/jpeg' && fileType != 'image/png' && fileType != 'image/gif'){
+			alert('選択できるファイル形式はJPEG、PNG、GIFです。');
+			$(this).val('');
+			return false;
+		// ファイルヘッダのチェック
+		}
+		var checkReader = new FileReader();
+		checkReader.onload = (function(file){
+			var headerType = getImageHeaderFormat(checkReader.result);
+			if(headerType !== fileType){
+				alert('不正なファイルです。');
+				$(this).val('');
+				return false;
+			}
+		});
+		checkReader.readAsArrayBuffer(file);
+		
+		// ファイルサイズの確認
+		if(file.size > maxFileSize){
+			alert('選択できる最大ファイルサイズは' + Math.ceil(maxFileSize/1024/1024) + 'MBです。');
+			$(this).val('');
+			return false;
+		}
+      	
+      	// ブラウザの確認
+		if(browserCheck()){
+			console.log("ブラウザチェックOK。");
+		}else{
+			alert("未対応のブラウザです。");
+		}
+
+      	//指定された画像ファイル読込み後に画像サイズを取得しリサイズしてcanvasに描画
+      	reader.onload = (function(file) {
+      		image.onload = function() {
+      			//canvasの最大サイズを指定
+				const MaxCanvasWidth = 640;
+				const MaxCanvasHeight = 480;
+				var MaxCanvasWidth = 640;
+				var MaxCanvasHeight = 480;
+
+				
+				// 横長画像の場合は横のサイズを指定値にあわせる
+				var width, height, ratio;
+				if(image.width > image.height){
+					ratio = image.height/image.width;
+					width = MaxCanvasWidth;
+					height = MaxCanvasWidth * ratio;
+				// 縦長画像の場合は縦のサイズを指定値にあわせる
+				} else {
+					ratio = image.width/image.height;
+					width = MaxCanvasHeight * ratio;
+					height = MaxCanvasHeight;
+				}
+
+				//canvasを描画し、ファイル情報を表示
+				var fileIdStr = e.target.id;	// 画像ファイルID名
+				var canvasIdStr = fileIdStr.replace('file','canvas');	// Canvas ID名
+				var fileInfoIdStr = fileIdStr.replace('file','file_info');	// ファイル情報ID名
+				var delBtIdStr = fileIdStr.replace('file','del_bt');	// 削除ボタンID名
+				var canvas = document.getElementById(canvasIdStr);
+				var fileInfo = $('#' + fileInfoIdStr);
+				if(canvas.getContext){
+					var ctx = canvas.getContext('2d');
+					ctx.clearRect(0,0,width,height);
+					canvas.width = width;
+					canvas.height = height;
+					ctx.drawImage(image,0,0,image.width,image.height,0,0,width,height);
+					
+					// 画像ファイル情報を表示
+					var orgImageSize = image.width + 'x' + image.height;
+					var canvasImageSize = Math.ceil(width) + 'x' + Math.ceil(height);
+					var orgFileSize = fileSize.toLocaleString();
+					fileInfo.empty();
+					fileInfo.append($('<div class="file_info"><b>Original</b>: Type(' + fileType + '), ImageSize(' + orgImageSize + 'px), FileSize(' + orgFileSize + ' bytes)</div>'));
+					console.log('Original: Type(' + fileType + '), ImageSize(' + orgImageSize + 'px), FileSize(' + orgFileSize + ' bytes)');
+					
+					// canvasの内容をblobに変換
+					var type = 'image/jpeg';
+					var quality = 1;
+					var canvasData = canvas.toDataURL(type);
+					var canvasBlob = base64ToBlob(canvasData);
+					fileInfo.append($('<div class="file_info"><b>Canvas</b>: Type(' + canvasBlob.type + '), ImageSize(' + canvasImageSize + 'px), FileSize(' + canvasBlob.size.toLocaleString() + ' bytes)</div>'));
+					console.log('Canvas: Type(' + canvasBlob.type + '), ImageSize(' + canvasImageSize + 'px), FileSize(' + canvasBlob.size.toLocaleString() + ' bytes)');
+					
+					if(canvasBlob.size >= maxUploadSize){
+						var qualityRatio = maxUploadSize / canvasBlob.size;
+console.log('Qratio = ' + qualityRatio);
+						var uploadData = canvas.toDataURL(type, qualityRatio);
+						var uploadBlob = base64ToBlob(uploadData);
+						fileInfo.append($('<div class="file_info"><b>Upload</b>: Type(' + uploadBlob.type + '), ImageSize(' + canvasImageSize + 'px), FileSize(' + uploadBlob.size.toLocaleString() + ' bytes)</div>'));
+						console.log('Upload: Type(' + uploadBlob.type + '), ImageSize(' + canvasImageSize + 'px), FileSize(' + uploadBlob.size.toLocaleString() + ' bytes)');
+					}
+
+					// 削除ボタン追加
+					fileInfo.append($('<button id="'+delBtIdStr+'" class="delete_bt" name= "'+delBtIdStr+'">削除</button>'));
+
+				}else{
+					console.log("No Context");
+				}
+			}
+			image.src = reader.result;
+		});
+		reader.readAsDataURL(file);
+		reader.readAsDataURL(file);
+	});
+
+
+	// Form Submit処理
+	$('#main').submit(function(event)){
+		event.preventDefault();
+		
+	});
+
+});
+
+<?php $this->Html->scriptEnd(); ?>
+
+<div id="header_under">
+	<div id="breadcrumb-area"><a href='<?php echo URL_SITE_TOP ?>'>HOME</a> > <a href='<?php echo URL_REGISTRATION_PAGE ?>'>新規会員登録</a> > 本人確認書類</div>
+</div>
+
+<div id="content">
+    <div id="page-title">本人確認書類アップロード</div>
+    <div id="registration-flow-img"><img src="../img/progress3.jpg" alt="投資家登録の流れ図"></div>
+
+	<div id="v040identification">
+		<h2>
+			続けて、ご本人確認及び口座確認等のため以下の書類をアップロード送信してください。<br>
+		</h2>	
+		<div style="text-align: left;padding: 20px 10px;">
+			<ul>
+				<li>コピーや撮影の際には、本人確認書類の端が欠けないようご注意ください。又、必ず書類全面が鮮明な状態で写るようお願い申し上げます。</li>
+				<li>有効期限の定めのあるものにつきましては、有効期限内のものをご提出いただきますようお願い申し上げます。</li>
+				<li><font color="red">※当社ではお客様のクレジットカード番号、セキュリティコード、本籍地等の情報取得は致しませんのでご注意ください。</font></li>
+			</ul>
+		</div>
+		
+		<form id="main" name="form" action="<?php echo $action ?>" method="post" enctype="multipart/form-data">	
+			<section id="personal_id" class="section_table">
+				<p class="table_title">① ご本人様確認書類(いずれか１点を選択)	</p>
+				<p class="bad_sample_bt">悪い例</p>
+				<div class="bad_sample"><img src="../img/bad-example-drvlic.jpg" width="100%" alt="ご本人様確認書類の悪い例"></div>
+				<section class="table_contents">
+					ご本人様確認書類(選択): 
+					<select name="personal_id_list">
+						<option value="drvs_license"><?php echo $list[CONFIG_0067][REVIEW_DRVS_LICENSE] ?></option>
+						<option value="health_insurance"><?php echo $list[CONFIG_0067][REVIEW_HEALTH_INSURANCE] ?></option>
+						<option value="mynumber_card2"><?php echo $list[CONFIG_0067][REVIEW_MYNUMBER_CARD] ?></option>
+						<option value="seal_certificate"><?php echo $list[CONFIG_0067][REVIEW_SEAL_CERTIFICATE] ?></option>
+						<option value="basic_resident_reg_card"><?php echo $list[CONFIG_0067][REVIEW_BASIC_RESIDENT_REG_CARD] ?></option>
+						<option value="passport"><?php echo $list[CONFIG_0067][REVIEW_PASSPORT] ?></option>
+						<option value="residence_card"><?php echo $list[CONFIG_0067][REVIEW_RESIDENCE_CARD] ?></option>
+						<option value="misc_id"><?php echo $list[CONFIG_0067][REVIEW_MISC_ID] ?></option>
+					</select>
+					<section class="remarks">
+						<div id="drvs_license">
+							裏面に記載がある場合には裏面も必要です<br>
+							氏名、生年月日、住所、有効期限、番号、顔写真が鮮明に表示されているかご確認ください
+						</div>
+						<div id="health_insurance" class="hide">
+							現住所記載が裏面の場合には表裏両面が必要です<br>
+							氏名、生年月日、住所、性別、有効期限又は発行日、保険者番号、記号、番号が鮮明に表示されているかご確認ください
+						</div>
+						<div id="mynumber_card2" class="hide">
+							本人確認書類としては表面のみ確認させていただきます<br>
+							氏名、生年月日、住所、性別、有効期限、顔写真が鮮明に表示されているかご確認ください
+						</div>
+						<div id="seal_certificate" class="hide">
+							発行後3ヶ月以内のもの<br>
+							氏名、生年月日、住所、発行日、発行自治体印が鮮明に表示されているかご確認ください
+						</div>
+						<div id="basic_resident_reg_card" class="hide">
+							表裏両面が必要です<br>
+							氏名、生年月日、住所、性別、有効期限、顔写真（写真付カードの場合）が鮮明に表示されているかご確認ください
+						</div>
+						<div id="passport" class="hide">
+							※2ページ（顔写真及び現住所が記載されているページ）が必要です<br>
+							氏名、生年月日、住所、性別、有効期限、顔写真、旅券番号が鮮明に表示されているかご確認ください
+						</div>
+						<div id="residence_card" class="hide">
+							表裏両面が必要です<br>
+							氏名、生年月日、住居地、性別、有効期限、顔写真、番号が鮮明に表示されているかご確認ください
+						</div>
+						<div id="misc_id" class="hide">
+							<font color="red">トラストレンディングよりご住所確認の為に再提出を依頼させて頂いた方が対象です。</font><br>
+							※氏名、住所が記載された公共料金の領収書が必要です。
+						</div>
+					</section>
+				</section>
+				<section class="table_contents">
+					<div id="panel_id1" class="canvas_panel">
+						画像ファイル1: <input type="file" name="file_id1" id="file_id1" accept="image/png,image/jpeg,image/gif">
+						<p id="file_info_id1"></p>
+						<p><canvas id="canvas_id1" class="preview_image" width="0" height="0"></canvas></p>
+					</div>
+					<div id="panel_id2" class="canvas_panel">
+						画像ファイル2: <input type="file" name="file_id2" id="file_id2" accept="image/png,image/jpeg,image/gif">
+						<p id="file_info_id2"></p>
+						<p><canvas id="canvas_id2" class="preview_image" width="0" height="0"></canvas></p>
+					</div>
+				</section>
+			</section>
+			
+			<section id="bank_account" class="section_table">
+				<p class="table_title">② 口座確認書類(登録銀行口座、いずれか1点を選択)</p>
+				<p class="bad_sample_bt">悪い例</p>
+				<div class="bad_sample"><img src="../img/bad-example-bank.jpg" width="100%" alt="口座確認書類の悪い例"></div>
+				<section class="table_contents">
+						口座確認書類(選択): 
+					<select name="bank_account_list">
+						<option value="passbook"><?php echo $list[CONFIG_0067][REVIEW_ACCT_PASSBOOK] ?></option>
+						<option value="atmcard"><?php echo $list[CONFIG_0067][REVIEW_ACCT_ATMCARD] ?></option>
+						<option value="netbank_ss"><?php echo $list[CONFIG_0067][REVIEW_ACCT_NETBANK_SS] ?></option>
+					</select>				
+					<section class="remarks">
+						<div id="passbook">
+							・預金通帳<br>
+							・キャッシュカード<br>
+							・口座情報画面<br>
+							銀行名、支店名(支店コード)、口座番号、口座名義人が鮮明に表示されているかご確認ください
+						</div>
+						<div id="atmcard" class="hide">
+							・預金通帳<br>
+							・キャッシュカード<br>
+							・口座情報画面<br>
+							銀行名、支店名(支店コード)、口座番号、口座名義人が鮮明に表示されているかご確認ください
+						</div>
+						<div id="netbank_ss" class="hide">
+							・預金通帳<br>
+							・キャッシュカード<br>
+							・口座情報画面<br>
+							銀行名、支店名(支店コード)、口座番号、口座名義人が鮮明に表示されているかご確認ください
+						</div>
+					</section>
+				</section>
+				<section class="table_contents">
+					<div id="panel_acct1" class="canvas_panel">
+						画像ファイル1: <input type="file" name="file_id1" id="file_acct1" accept="image/png,image/jpeg,image/gif">
+						<p id="file_info_acct1"></p>
+						<p><canvas id="canvas_acct1" class="preview_image" width="0" height="0"></canvas></p>
+					</div>
+					<div id="panel_acct2" class="canvas_panel">
+						画像ファイル1: <input type="file" name="file_id1" id="file_acct2" accept="image/png,image/jpeg,image/gif">
+						<p id="file_info_acct2"></p>
+						<p><canvas id="canvas_acct2" class="preview_image" width="0" height="0"></canvas></p>
+					</div>
+				</section>
+			</section>			
+			<section id="mynumber" class="section_table">
+				<p class="table_title">③ マイナンバーのご提出(いずれか1点を選択)</p>
+				<p class="bad_sample_bt">悪い例</p>
+				<div class="bad_sample"><img src="../img/bad-example-mynum.jpg" width="100%" alt="マイナンバーカードの悪い例"></div>
+				<section class="table_contents">
+					マイナンバー確認書類(選択): 
+					<select name="mynumber_list">
+						<option value="mynumber_card"><?php echo $list[CONFIG_0067][REVIEW_MYNUMBER_CARD] ?></option>
+						<option value="mynumber_notification"><?php echo $list[CONFIG_0067][REVIEW_MYNUMBER_NOTIFICATION] ?></option>
+						<option value="residential_cert"><?php echo $list[CONFIG_0067][REVIEW_RESIDENTIAL_CERT] ?>(個人番号記載あり)</option>
+					</select>				
+					<section class="remarks">
+						<div id="mynumber_card">
+							住所、氏名、生年月日はご登録いただいている内容と相違ないことをご確認ください。<br>
+							<font color="red">また、本人確認資料として個人番号カードを両面ともお送りいただいた方はご提出の必要はございません。</font><br>
+							表裏両面が必要です
+						</div>
+						<div id="mynumber_notification" class="hide">
+							住所、氏名、生年月日はご登録いただいている内容と相違ないことをご確認ください。<br>
+							<font color="red">また、本人確認資料として個人番号カードを両面ともお送りいただいた方はご提出の必要はございません。</font><br>
+							裏面に記載がある場合には裏面も必要です
+						</div>
+						<div id="residential_cert" class="hide">
+							住所、氏名、生年月日はご登録いただいている内容と相違ないことをご確認ください。<br>
+							<font color="red">また、本人確認資料として個人番号カードを両面ともお送りいただいた方はご提出の必要はございません。</font><br>
+							発行日から6ヶ月以内のものでマイナンバーの記載があるものが必要です
+						</div>
+					</section>
+				</section>
+				<section class="table_contents">
+					<div id="panel_mynum1" class="canvas_panel">
+						画像ファイル1: <input type="file" name="file_mynum1" id="file_mynum1" accept="image/png,image/jpeg,image/gif">
+						<p id="file_info_mynum1"></p>
+						<p><canvas id="canvas_mynum1" class="preview_image" width="0" height="0"></canvas></p>
+					</div>
+					<div id="panel_mynum2" class="canvas_panel">
+						画像ファイル2: <input type="file" name="file_mynum2" id="file_mynum2" accept="image/png,image/jpeg,image/gif">
+						<p id="file_info_mynum2"></p>
+						<p><canvas id="canvas_mynum2" class="preview_image" width="0" height="0"></canvas></p>
+					</div>
+				</section>
+			</section>
+		<!--	<input type="button" id="<?php echo OBJECT_ID_BTN000010 ?>" class="upload_bt" value="アップロード" onclick="buttonClick('<?php echo EVENT_ID_030040020 ?>');"> -->
+			<button class="upload_bt" name= "upload">アップロード</button>
+		</form>
+	</div>
+	<?php echo $this->fetch('footer'); ?>
+</div> <!--content end-->

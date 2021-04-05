@@ -1,0 +1,78 @@
+body {
+	background  : #ffffff;
+	color       : #660000;
+	font-family : "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size   : 90%;
+	margin      : 0;
+}
+ 
+#container {
+}
+ 
+#header {
+	background-color : #660000;
+	color            : #FFFFFF;
+}
+
+h1 {
+	color     : #660000;
+	font-size : 18pt;
+}
+
+#content {
+	padding : 5px;
+}
+ 
+#footer {
+	text-align    : right;
+	color         : #990000;
+	border-bottom : 1px solid #990000;
+	padding       : 20px 10px 0px 0px;
+}
+ 
+table {
+	width:90%;
+}
+
+td {
+	padding          : 2px 5px 2px 5px;
+	background-color : #FFFFFF;
+	color            : #660000;
+	border           : #ffeeee solid 2px;
+}
+
+pre {
+	background-color : #FFFFFF;
+	padding          : 5px 10px 5px 10px;
+	margin           : 10px 20px 10px 20px;
+}
+
+p.error {
+	color       : red;
+}
+
+#horizontal {
+	border-bottom : 1px solid gray;
+	height        : 23px;
+	padding-top   : 5px;
+}
+
+#horizontal #label100 {
+	float : left;
+	width : 100px;
+}
+
+#horizontal #label200 {
+	float : left;
+	width : 200px;
+}
+
+#horizontal #label300 {
+	float : left;
+	width : 300px;
+}
+
+#horizontal #text300 {
+	float : left;
+	width : 300px;
+}

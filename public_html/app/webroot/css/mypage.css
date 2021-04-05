@@ -1,0 +1,792 @@
+/* 旧cssが含まれているので見直しが必要 2019/11/29 */
+
+/* マイページ
+---------------------------------------------*/
+
+/* 各ページタイトル */
+.mypagetitle-area {
+    margin-top: 3em;
+}
+
+.mypagetitle-area .col-md-12 {
+    background-color: #B49E65;
+    border-bottom: 5px solid #665731;
+    padding-top: 1em;
+}
+
+.mypagetitle-area .col-md-12 h3 {
+    color: #fff;
+}
+
+.mp-kensaku{}
+.mp-kensaku input{
+    text-align: center;
+}
+.form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control::-webkit-input-placeholder {
+    text-align: center;
+}
+
+
+
+/* マイページメニュー */
+@media (min-width:992px) {
+    .mypagemenu {
+        padding: 0.5em 0 1em 0;
+    }
+        .mypagemenu .scroll-nav {
+            margin: 0;
+            padding: 0;
+        }
+        .scroll-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .scroll-nav ul li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border-top: 1px solid #B49E65;
+            border-left: 1px solid #B49E65;
+            border-right: 1px solid #B49E65;
+            
+        }
+
+        .scroll-nav ul li:last-child {
+            border-bottom: 1px solid #B49E65;
+        }
+
+        .scroll-nav ul li a {
+            display: block;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 15px 10px;
+            width: 100%;
+
+            
+        }
+
+        .mp_m_on {
+            display: block;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 15px 10px !important;
+            width: 100%;
+            background-color: #B49E65;
+            color: #fff;
+}
+
+
+    .mypagebt-off a {
+        background-color: #fff;
+        color: #333333;
+    }
+
+    .scroll-nav ul li a:hover, .mypagebt-on a {
+        background-color: #B49E65;
+        color: #fff;
+    }
+    .mypagemenu ul li span {
+        font-weight: bold;
+        display: block;
+        text-indent: 10px;
+    }
+
+    .mypagemenu .material-icons {
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+}
+
+
+
+
+
+
+/* マイページメニュー 横スクロール
+---------------------------------------------*/
+@media screen and (max-width: 991px) {
+    .mypagemenu {
+        position: relative;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    .scroll-nav {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #cccccc; /* メニューの背景色 */
+        overflow-x: scroll;
+    }
+
+    .scroll-nav ul {
+        /*max-width: 1060px; /* メニューの最大幅 */
+        min-width: 1050px; /* メニューの最小幅 */
+        /*height: 40px;*/
+        /*line-height: 40px;*/
+        margin: 0;
+        list-style: none;
+        padding: 0; /* 右側の固定分余白を空ける */
+        white-space: nowrap;
+    }
+
+    .scroll-nav ul li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        border-right: 1px solid #fff;
+        display: inline-block;
+    }
+
+    .scroll-nav ul li a {
+        display: inline-block;
+        color: #fff; /* メニューの文字色 */
+        text-decoration: none;
+        margin: 0;
+        padding: 10px 20px;
+        text-align: center;
+    }
+        .mp_m_on {
+        display: inline-block;
+        color: #fff; /* メニューの文字色 */
+        text-decoration: none;
+        margin: 0;
+        padding: 10px 20px !important;
+        text-align: center;
+        background-color: #B49E65;
+        color: #fff;
+
+}
+
+    .mypagebt-off a {
+        color: #333333;
+    }
+
+    .scroll-nav ul li a:hover, .mypagebt-on a {
+        background-color: #B49E65;
+        color: #fff;
+    }
+
+    .mypagemenu ul li span {
+        font-weight: bold;
+    }
+
+    .mypagemenu .material-icons {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* --------- マイページメニュー ここまで --------- */
+
+
+
+    #mypage_area {
+        margin: 40px 0 100px 0;
+        padding: 0;
+        overflow: auto;
+    }
+
+    #mypage_01 {
+        margin: 0px;
+        padding: 0;
+        width: 470px;
+        border: 10px solid #e3e3e3;
+        float: left;
+    }
+
+        #mypage_01 #form {
+            border: 0px solid #e3e3e3;
+            padding: 0;
+            margin: 0;
+        }
+
+    #mypage_01_title {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5px 0px;
+        background-color: #062445;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    #display_mypage00 {
+        margin: 20px 10px 30px 10px;
+        border: 0px solid #666666;
+        padding: 0px 0px 0px 0px;
+        background-color: #fff;
+        width: 94%;
+    }
+
+    #mypage_01 hr {
+        border: 1px solid #fff;
+        width: 98%;
+    }
+
+    .horizontal5 .label200 {
+        float: left;
+        border: 0px solid #666666;
+        padding: 10px 0 10px 20px;
+        width: 180px;
+        background-color: #fff;
+        font-size: 1.2em;
+    }
+
+    .display_mypage1 {
+        border: 0px solid #666666;
+        background-color: #fff;
+    }
+
+        .display_mypage1 input {
+            margin: 10px 10px 10px 0px;
+            width: 200px;
+            font-size: 1.4em;
+            text-align: right;
+            border: none;
+        }
+
+    #mypage_01_bt .button {
+        width: 120px;
+        margin: 10px 0 0 0;
+        padding: 10px 0;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        border: 0px solid #666666;
+        border-radius: 5px; /* CSS3草案 */
+        -webkit-border-radius: 5px; /* Safari,Google Chrome用 */
+        -moz-border-radius: 5px; /* Firefox用 */
+        background: linear-gradient(#8493A3, #374F69);
+    }
+
+        #mypage_01_bt .button:hover {
+            background: linear-gradient(#374F69, #8493A3);
+            color: #cccccc;
+        }
+
+    #mypage_bt {
+        margin: 0px;
+        text-align: center;
+        border: 0px solid #666666;
+    }
+
+        #mypage_bt .button_on {
+            width: 145px;
+            margin: 0px 6px;
+            padding: 12px 0;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            border: 0px solid #666666;
+            border-radius: 5px; /* CSS3草案 */
+            -webkit-border-radius: 5px; /* Safari,Google Chrome用 */
+            -moz-border-radius: 5px; /* Firefox用 */
+            background: linear-gradient(#9E2424, #64071B);
+        }
+
+            #mypage_bt .button_on:hover {
+                background: linear-gradient(#64071B, #9E2424);
+                color: #cccccc;
+            }
+
+        #mypage_bt .button_off {
+            width: 145px;
+            margin: 0px 6px;
+            padding: 12px 0;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            border: 0px solid #666666;
+            border-radius: 5px; /* CSS3草案 */
+            -webkit-border-radius: 5px; /* Safari,Google Chrome用 */
+            -moz-border-radius: 5px; /* Firefox用 */
+            background: linear-gradient(#62af56, #588B47);
+        }
+
+            #mypage_bt .button_off:hover {
+                background: linear-gradient(#588B47, #62af56);
+                color: #cccccc;
+            }
+
+    #mypage_02 {
+        margin: 0;
+        padding: 10px;
+        width: 410px;
+        border: 0px solid #666666;
+        background-color: #e3e3e3;
+        overflow: auto;
+        float: right;
+    }
+
+    #mypage_02_title {
+        padding: 5px 2px;
+        background-color: #cc9900;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    #mypage_02_display {
+        padding: 10px;
+        background-color: #fff;
+        font-size: 14px;
+        text-align: left;
+    }
+
+        #mypage_02_display table {
+            padding: 0 5px;
+        }
+
+        #mypage_02_display td {
+            vertical-align: top;
+            padding: 5px;
+        }
+
+    .kouza_koumoku {
+        width: 70px;
+        font-weight: bold;
+    }
+
+    .kouza_naiyou {
+    }
+
+
+
+    #mypage_03 {
+        margin: 20px 0 0 0;
+        padding: 0;
+        width: 470px;
+        border: 10px solid #e3e3e3;
+        float: left;
+    }
+
+
+
+
+
+
+
+
+
+    /* マイページ　投資家情報 */
+    #v070lenderinfo {
+        border: 0px solid #666666;
+    }
+
+        #v070lenderinfo #horizontal4 {
+            padding: 0;
+            border-bottom: 1px solid #cccccc;
+            border-left: 1px solid #cccccc;
+            border-right: 1px solid #cccccc;
+        }
+
+            #v070lenderinfo #horizontal4 .label300 {
+                width: 250px;
+                float: left;
+                padding: 10px;
+                margin: 0px;
+                border-right: 0px solid #999999;
+                background-color: #D9DEF0;
+            }
+
+    .v070_info {
+        border: 0px solid #666666;
+        overflow: auto;
+        margin: 0px;
+        padding: 10px;
+    }
+
+    #v070henkou_area {
+        margin: 80px auto 30px;
+        width: 800px;
+    }
+
+        #v070henkou_area h3 {
+            border-top: 1px solid #666666;
+            border-right: 1px solid #666666;
+            border-left: 1px solid #666666;
+            margin: 0;
+            padding: 10px 0;
+            background-color: #666666;
+            color: #fff;
+        }
+
+    .v070henkou_area_s {
+        border-right: 1px solid #666666;
+        border-left: 1px solid #666666;
+        padding: 10px;
+        overflow: auto;
+    }
+
+    .v070henkou_area_s1 {
+        border-left: 1px solid #a80000;
+        border-top: 1px solid #a80000;
+        border-right: 1px solid #a80000;
+        background-color: #cc0000;
+        text-align: left;
+        padding: 10px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .v070henkou_area_s2 {
+        border-left: 1px solid #a80000;
+        border-right: 1px solid #a80000;
+        border-bottom: 1px solid #a80000;
+        overflow: auto;
+        padding: 20px 10px;
+    }
+
+    .v070henkou_area_s3 {
+        float: left;
+        width: 550px;
+        text-align: left;
+    }
+
+    .v070henkou_area_s4 {
+        overflow: auto;
+        border: 0px solid #666666;
+        text-align: right;
+    }
+
+        .v070henkou_area_s4 input {
+            width: 190px;
+            padding: 10px;
+        }
+
+
+
+    /*---- お知らせ ----*/
+
+   #mp-notice { /* 重要なお知らせ */
+        border: 2px solid #cc3333;
+    }
+
+        #mp-notice dt {
+            margin: 0;
+            padding: 10px;
+            background-color: #cc3333;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #mp-notice dd {
+            font-size: 1em;
+            padding: 10px;
+            text-align: left;
+            margin: 0;
+        }
+
+        #mp-notice .error {
+            color: #cc3333;
+        }
+    /* 重要なお知らせ ここまで */
+
+
+    .mp-info-table {
+        padding: 0;
+    }
+
+        .mp-info-table a {
+            color: #555555;
+        }
+
+        .mp-info-table th {
+            text-align: center;
+            background-color: #B49E65;
+            color: #fff;
+            border: 1px solid #665731;
+        }
+
+        .mp-info-table span {
+            width: 100%;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+        }
+
+    .td-center {
+        text-align: center;
+    }
+
+    .mp-info-midoku, .mp-info-midoku a {
+        color: red;
+        font-weight: bold;
+    }
+
+    .mp-info-table a:hover {
+        text-decoration: underline;
+    }
+
+
+
+.mp-pjlist-title {
+    background-color: #B49E65;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.info_d{
+	padding:0.5em 1em;
+	border-style:solid solid none solid;
+	border-width:1px;
+	border-color:#B49E65;
+	background-color:#B49E65;
+	color:#fff;
+	letter-spacing:0.15em;
+}
+.info_d_f{
+	border-style:solid solid none solid;
+	border-width:1px;border-color:#B49E65;
+	background-color:#fff;
+}
+.info_d_m{
+	padding:2em 1.5em;
+	border-style:solid;
+	border-width:1px;
+	border-color:#ccc #B49E65 #B49E65 #B49E65;
+	background-color:#fff;
+}
+
+
+
+.invest_t{
+	padding:0.5em;
+	background-color:#B49E65;
+	color:#fff;
+}
+
+/*基本情報*/
+.lenderinfo_th{
+	padding:0.5em;
+	border-bottom:1px solid #B49E65;
+	background-color:#D9CCA9;
+}
+
+.lenderinfo_td{
+	padding:0.5em;
+	border-bottom:1px solid #B49E65;
+}
+
+
+/* 必要書類提出ページ 画像アップロード */
+.imgupload_section{
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+.is_step1{    /* 画像種類選択 */
+    
+}
+
+.is_step2{    /* 画像ファイル選択 */
+    
+}
+.is_step2 label > input {
+display:none; /* アップロードボタンのスタイルを無効にする */
+}
+.is_step2 label {
+color: #AAAAAA; /* ラベルテキストの色を指定する */
+background-color: #006DD9;/* ラベルの背景色を指定する */
+padding: 10px; /* ラベルとテキスト間の余白を指定する */
+border: double 4px #AAAAAA;/* ラベルのボーダーを指定する */
+}
+
+.is_step3{    /* 画像確認選択 */
+    
+} 
+.is_step4{    /* 画像アップロードボタン選択 */
+    
+}
+.is_step4.submit{
+    background-color: #666666;
+    width: 100%;
+    border: 1px solid #666666;
+}
+.is_step4 input{
+    display: block;
+    padding: 0.8em 3.2em;
+    border: none;
+    border-radius: 1.6em;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(rgba(65, 113, 255, 1) 0%, rgba(0, 63, 255, 1) 100%);
+    box-shadow: 0 5px 20px rgba(0, 63, 255, .5);
+}
+.is_step4 input:hover{
+    color: lightsteelblue;
+    background: linear-gradient(-45deg, rgba(87, 225, 181, 1) 0%, rgba(0, 63, 255, 1) 100%);
+    box-shadow: 0 5px 20px rgba(0, 63, 255, .5);
+}
+
+.imgupload_end_bt{    /* 画像アップロード完了ボタン */
+    
+}
+
+.uploadimg-area{
+}
+
+.uploadimg-area img{
+/*    object-fit: cover;    */
+    border-radius: .5em;
+    overflow: hidden;
+}
+.uploadimg-area img:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #666666;
+}
+
+.yureyure {
+    animation: yureyure 2s infinite;
+    -webkit-animation: yureyure 2s infinite;
+}
+@keyframes yureyure {
+    0% {
+        transform: translate(0px, 2px);
+    }
+    5% {
+        transform: translate(0px, -2px);
+    }
+    10% {
+        transform: translate(0px, 2px);
+    }
+    15% {
+        transform: translate(0px, -2px);
+    }
+    20% {
+        transform: translate(0px, 2px);
+    }
+    25% {
+        transform: translate(0px, -2px);
+    }
+    30% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@-webkit-keyframes yureyure {
+    0% {
+        -webkit-transform: translate(0px, 2px);
+    }
+    5% {
+        -webkit-transform: translate(0px, -2px);
+    }
+    10% {
+        -webkit-transform: translate(0px, 2px);
+    }
+    15% {
+        -webkit-transform: translate(0px, -2px);
+    }
+    20% {
+        -webkit-transform: translate(0px, 2px);
+    }
+    25% {
+        -webkit-transform: translate(0px, -2px);
+    }
+    30% {
+        -webkit-transform: translate(0px, 0px);
+    }
+}
+
+
+.setsumei-bot2{
+}
+.setsumei-bot2 a{
+    /* white-space:normal; */
+    box-shadow: 0.625rem 0.625rem 0.9375rem 0 rgba(0,28,46,0.2);
+}
+.setsumei-bot2 a:hover{
+    box-shadow: 0.625rem 0.625rem 0.9375rem 0 rgba(0,28,46,0.4);
+}
+
+
+.btn-setsumei {
+    color: #fff;
+    background-color: #13b1cd;
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: #13b1cd;
+    box-shadow: 0.625rem 0.625rem 0.9375rem 0 rgba(0,28,46,0.2);
+}
+
+.btn-setsumei:focus, .btn-setsumei:hover {
+    color: #fff;
+    background-color: #0d83a3;
+    border-color: #0d83a3;
+    box-shadow: 0.625rem 0.625rem 0.9375rem 0 rgba(0,28,46,0.4);
+}
+
+
+
+
+/*add_list*/
+
+.add_list ul {
+  border: solid 2px #ffb03f;
+  border-radius:10px;
+  padding: 0.5em 1em;
+  position: relative;
+  margin-bottom:2em;
+}
+
+.add_list ul li {
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.2em;
+  border-bottom: dashed 1px silver;
+  list-style-type: none!important;
+}
+
+.add_list ul li:before {
+  font-family: "material icons";
+  content:'label';
+  /*content: "\f138";/*アイコン種類*/
+  position: absolute;
+  left : 1em; /*左端からのアイコンまで*/
+  color: #ffb03f; /*アイコン色*/
+}
+
+.add_list ul li:last-of-type {
+  border-bottom: none;
+}
+
+
+
+.stripe_add
+{
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  /*padding: 0 2em;*/
+  /*width: 200px; 
+  height: 100px;*/
+}
+
+.stripe_add::after
+{
+position: absolute;
+    top: -10px; bottom: -10px;
+    left: -10px; right: -10px;
+    background: repeating-linear-gradient(-45deg, red, red 10px, white 10px, white 20px);
+    background-color: black;
+    content: '';
+    z-index: -1;
+}
+
+

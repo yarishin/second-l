@@ -1,0 +1,681 @@
+body {
+	background  : #eeeeee;
+	color       : #660000;
+	font-family : "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size   : 90%;
+	margin      : 0;
+}
+
+#container {
+	margin: 0;
+	padding: 10px;
+}
+ 
+#header {
+	background-color : #000099;
+	color            : #FFFFFF;
+}
+
+#header input[type="button"] {	/* ログアウトボタン */
+	padding: 5px 20px;
+	background: linear-gradient(#cccccc, #7c7c7c);
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	box-shadow: 0px 0px 2px #666666;
+}
+
+#header input[type="button"]:hover {
+	cursor: pointer;
+	background: linear-gradient(#7c7c7c, #cccccc);
+	color: #fff;
+	text-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px 0px 5px #000000;
+}
+
+
+
+/*test*/
+#horizontal input[type="text"] {
+	padding:1px 0;
+}
+
+
+
+/*test*/
+
+
+h1 {
+	color: #000000;
+	font-size: 18pt;
+}
+.admin-pagetitle {
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    background-color: #2e4d7c;
+    border-left: 10px solid #3465AF;
+    letter-spacing: 0.2em;
+}
+
+#content {
+    padding: 5px;
+}
+ 
+#footer {
+	text-align    : right;
+	color         : #000000;
+	padding       : 20px 10px 0px 0px;
+    background-color: #fff;
+	height: 100%;
+}
+ 
+pre {
+	background-color : #FFFFFF;
+	padding          : 5px 10px 5px 10px;
+	margin           : 10px 20px 10px 20px;
+}
+
+p.error {
+	color        : red;
+	padding-left : 15px;
+}
+
+.button, #horizontal input[type="submit"]{	/* ログインボタン ・ メニューボタン */
+	/*width : 100px;*/
+        /*test*/
+        width : 120px;
+        background: linear-gradient(#5486DF, #3465AF);
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        margin: 5px;
+}
+.button:hover, #horizontal input[type="submit"]:hover {
+	background: linear-gradient(#3465AF, #5486DF);
+	color: #eeeeee;
+	box-shadow: 0 0 5px #3e5881;
+}
+.button_now{
+    width : 120px;
+    background: linear-gradient(#FF6699, #FF0B5A);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.select {
+	background-color : #ffffff;
+	border           : 2px inset #eeeeee;
+	ime-mode         : disabled;
+	padding          : 1px 0px 1px 0px;
+}
+
+#horizontal {
+	overflow		: hidden;
+	margin			: 10px 0;
+	padding         : 0px 0px 0px 10px;
+}
+/*v120funddetail ファンド詳細（照会）*/
+.v120{}
+	.v120 #horizontal:hover, .v120 #horizontal input[type="text"]:hover {
+		background-color: #cccccc;
+	}
+#v120-left, #v120-right {
+    background-color: #EDF7FF;
+    padding: 1px;
+    margin: 1px;
+    border: 3px solid red;
+    overflow: hidden;
+}
+#v120-left{
+    width: 700px;
+    float: left;
+}#horizontal .text_area
+#v120-right {
+
+}
+/*v120funddetail ファンド詳細（照会）END*/
+
+
+#leftbox {
+    width: 100px;
+}
+
+#horizontal #label50 {
+	float : left;
+	width : 70px;
+}
+
+#horizontal #label50_center {
+	float : left;
+	width : 50px;
+	text-align : center;
+}
+
+#horizontal #label100 {
+	float : left;
+	width : 100px;
+}
+
+#horizontal #label150 {
+	float : left;
+	width : 150px;
+}
+
+#horizontal #label200 {
+	float : left;
+	width : 200px;
+}
+
+#horizontal #label300 {
+	float : left;
+	width : 300px;
+}
+
+#horizontal .text50 {
+	margin-right     : 10px;
+	width : 50px;
+}
+
+#horizontal .text50_right {
+	margin-right     : 10px;
+	text-align       : right;
+	width : 50px;
+}
+
+#horizontal #text50_right {
+	margin-right     : 10px;
+	text-align       : right;
+	width : 50px;
+}
+
+#horizontal .text100 {
+	margin-right     : 10px;
+	width : 100px;
+}
+
+#horizontal .text100_right {
+	margin-right     : 10px;
+	text-align       : right;
+	width : 100px;
+}
+
+#horizontal .text100_right input[type="text"] {
+	text-align : right;
+	width      : 100%;
+}
+
+#horizontal #text100_right {
+	margin-right     : 10px;
+	text-align       : right;
+	width : 100px;
+}
+
+#horizontal #text200 {
+	float : left;
+	width : 200px;
+}
+
+#horizontal #text300, #horizontal .text300 {
+    float: left;
+    width: 300px;
+}
+#horizontal #text400, #horizontal .text400 {
+    float: left;
+    width: 400px;
+}
+
+#horizontal #text600 {
+	float : left;
+	width : 600px;
+}
+
+#horizontal .text_area {
+	resize : none;
+	float : left;
+	height: 100px;
+	width : 400px;
+}
+
+#horizontal .label25_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : center;
+	width            : 25px;
+}
+
+#horizontal .label50 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	width            : 50px;
+}
+
+#horizontal .label50_right {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : right;
+	width            : 50px;
+}
+
+#horizontal .label50_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : center;
+	width            : 50px;
+}
+
+#horizontal .label75 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	width            : 75px;
+}
+
+#horizontal .label75_right {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : right;
+	width            : 75px;
+}
+
+#horizontal .label75_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : center;
+	width            : 75px;
+}
+
+#horizontal .label100 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	width            : 100px;
+}
+
+#horizontal .label100_right {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : right;
+	width            : 100px;
+}
+
+#horizontal .label100_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : center;
+	width            : 100px;
+}
+
+#horizontal .label150 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	width            : 150px;
+}
+
+#horizontal .label150_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : center;
+	width            : 150px;
+}
+
+#horizontal .label150_right {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	float            : left;
+	height           : 20px;
+	margin-right     : 10px;
+	text-align       : right;
+	width            : 150px;
+}
+
+#horizontal .label200 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	width            : 200px;
+}
+
+#horizontal .label200_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	text-align       : center;
+	width            : 200px;
+}
+
+#horizontal .label200_right {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	text-align       : right;
+	width            : 200px;
+}
+
+#horizontal .label300 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	width            : 300px;
+}
+
+#horizontal .label300_center {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	text-align       : center;
+	width            : 300px;
+}
+
+#horizontal .label400 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	width            : 400px;
+}
+
+#horizontal .label600 {
+	border-top       : 0px solid gray;
+	border-right     : 0px solid gray;
+	border-left      : 0px solid gray;
+	border-bottom    : 1px solid gray;
+	margin-right     : 10px;
+	float            : left;
+	height           : 20px;
+	width            : 600px;
+}
+
+#month_table {
+	border       : 1px solid gray;
+	float        : left;
+	margin-right : 10px;
+	text-align   : center;
+	width        : 300px;
+}
+
+#month_table #month_th {
+	background-color : #ffffcc;
+	border           : 1px solid gray;
+}
+
+#month_table #month_td {
+	border : 1px solid gray;
+	height : 50px;
+}
+
+.lender_input_600 input[type="text"]{
+   width: 600px;
+}
+
+.lender_input_300 input[type="text"]{
+   width: 300px;
+}
+
+.lender_confirm_text {
+	color: red;
+}
+
+.lender_confirm_hr {
+	margin-left: 0px;
+	width: 1000px;
+}
+
+#form_block {
+	border : 0px solid gray;
+	float  : left;
+	width  : 400px;
+}
+
+#form_block_both {
+	border : 0px solid gray;
+	clear  : both;
+	width  : 400px;
+}
+
+#horizontal #v310_div_other {
+	margin-left : 7px;
+	margin-right: 5px;
+	float        : left;
+}
+
+#horizontal #v310_div25 {
+	border       : 0px solid red;
+	float        : left;
+	width        : 25px;
+}
+
+#horizontal #v310_div25 input[type="text"] {
+	text-align : right;
+	width      : 100%;
+}
+
+#horizontal #v310_div50 {
+	border       : 0px solid red;
+	float        : left;
+	width        : 50px;
+}
+
+#horizontal #v310_div50 input[type="text"] {
+	text-align : right;
+	width      : 100%;
+}
+
+#horizontal #v310_div100 {
+	border       : 0px solid red;
+	float        : right;
+	margin-right : 50px;
+	width        : 100px;
+}
+
+#horizontal #v310_div100 input[type="text"] {
+	text-align : right;
+	width      : 100%;
+}
+
+#horizontal #v310_div100_2 {
+	border       : 0px solid red;
+	float        : left;
+	width        : 100px;
+}
+
+#horizontal #v310_div100_2 input[type="text"] {
+	text-align : right;
+	width      : 100%;
+}
+
+#horizontal #v310_div200 {
+	border : 0px solid blue;
+	float  : left;
+	width  : 200px;
+}
+
+#horizontal #v310_div200 input[type="text"] {
+	width : 100%;
+}
+
+.tableshow input[type="text"] {
+	text-align : right;
+	width      : 100px;
+}
+
+
+/*test*/
+#kanri_menu{
+    background: linear-gradient(#5486DF, #3465AF);
+    margin: 0;
+  
+}
+#kanri_menu #horizontal input{margin: 0;}
+
+#kanri_main{
+    border: 0px solid #666666;
+    margin: 10px 0 0 0;
+    padding: 0 10px;
+    color: #000000;
+}
+#kanri_main table{border-collapse: collapse;}
+#kanri_main table th{}
+#kanri_main table td{}
+
+#member_ruikei th, #member_ruikei td{
+    width: 120px;
+    text-align: center;
+    font-weight: normal;
+    padding: 5px 0;
+    border: 1px solid #3465AF;
+}
+#member_ruikei th{background-color: #BACCEB;}
+
+.member_toukei{}
+.member_toukei th, .member_toukei td{
+    border: 1px solid #666666;
+    text-align: center;
+    font-weight: normal;
+    
+}
+.member_toukei th{
+    padding: 5px 0;
+    background-color: #BACCEB;
+}
+.mt_date{ width: 80px;}
+.mt_kei{width: 100px;}
+.mt_total{background-color: #FFB9CF;}
+
+#invest_statistics{margin-top: 10px;}
+#invest_statistics th{
+    padding: 5px 0;
+    width: 110px;
+    background-color: #000000;
+    color: #fff;
+}
+#invest_statistics th, #invest_statistics td{
+    border: 1px solid #666666;
+    font-weight: normal;
+}
+
+
+
+#Search_bt{margin-top: 20px;}
+#Search_kekka{
+    margin-top: 50px;
+}
+#Search_kekka table{border: 1px solid #666666;border-collapse: collapse;}
+#Search_kekka th, #Search_kekka td{border: 1px solid #666666;font-weight: normal;}
+#Search_kekka th{padding: 5px 0;background-color: #cACbff;}
+#Search_kekka td{padding: 3px 10px;font-size: 12px;}
+
+
+
+.pink-a { /* 認証キー印刷ボタン */
+	background: linear-gradient(#FF99FF, #FF4DFF);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+	margin: 5px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	width: 120px;
+}
+
+	.pink-a:hover {
+		background: linear-gradient(#FF4DFF, #FF99FF);
+		color: #eeeeee;
+		box-shadow: 0 0 5px #3e5881;
+	}

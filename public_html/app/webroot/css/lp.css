@@ -1,0 +1,199 @@
+/*html
+----------------------------------------------------*/
+
+html{overflow-y:scroll;}
+
+/*body
+----------------------------------------------------*/
+
+body{
+	background-color     : #ffffff;
+	width                : 100%;
+	text-align           : center;
+	margin               : auto;
+	padding              : 0;
+	-webkit-text-size-adjust: 100%;
+        font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+.reset{clear: left;}
+
+a{outline: none;}
+
+
+
+
+#wrapper{
+	margin: 0 auto;
+	width: 960px;
+	border: 0px solid #666666;
+}
+#wrapper h1{
+	margin: 10px 0 10px 0;
+	padding: 0;
+}
+#wrapper h1 a{
+	text-indent: -99999px;
+	display: block;
+	width: 130px;
+	height: 33px;
+	background: url(../img/logo001_s.gif) no-repeat;
+}
+.header_img{margin: 0;padding: 0;border: none;}
+.header_img2{margin: 0;padding: 0;border: none;}
+.header_img2:hover{opacity: 0.8;}
+#lp_2{margin: 50px auto;}
+
+
+#wrapper dl{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: left;
+}
+#wrapper dt{
+	margin: 0;
+	padding: 0;
+	
+}
+#wrapper dt{}
+#wrapper dd{margin: 0;padding-bottom: 50px;border: 0px solid #666666;}
+#wrapper dd span{font-size: 2em;}
+.lp_text{width: 910px;padding-left: 50px;}
+
+.lp_box1, #lp_box2{width: 250px;height: 200px;overflow: auto;padding: 5px;}
+.lp_box1{border: 10px solid #cccccc;float: left;margin-right: 20px;}
+#lp_box2{border: 10px solid #6699cc;}
+#wrapper dd strong, #wrapper dd small{padding: 0;margin: 0;display: block;text-align: center;}
+#wrapper dd strong{font-size: 1.8em;font-weight: normal;}
+#wrapper dd small{font-size: 1em;}
+
+.lp_box1 p, #lp_box2 p{margin-top: 10px;font-size: 15px;}
+#lp_box2 b{display: block;text-align: center;color: red;font-weight: normal;}
+
+
+#caution{
+	background-color: #F0F0DF;
+	border: 1px solid #D3D3A0;
+	padding: 10px;
+	width: 97%;
+	
+	border-radius: 6px;        /* CSS3草案 */  
+	-webkit-border-radius: 6px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 6px;   /* Firefox用 */  
+
+}
+#caution h3{margin: 0;}
+#caution h3 span{font-weight: bold;font-size: 19px;}
+#caution ul{font-size: 14px;color: red;margin: 0;padding: 0 0 0 25px;list-style-type: disc;}
+
+
+
+#campaign_page{margin: 10px auto;width: 96%;text-align: left;}
+.cp_font{font-size: 14px;}
+#campaign_page p{font-size: 14px;}
+#campaign_page strong{display: block;text-align: center;margin: 20px 0;}
+#campaign_page table{border: 0px solid #666666;width: 96%;margin: 10px auto;}
+#campaign_page table td{vertical-align: top;}
+
+#shinki_button{
+    margin: 50px 0 30px 0;
+    padding: 0;
+}
+#shinki_button a img:hover{opacity: 0.8;}
+
+
+
+#shinki_button22{
+    margin: 0px 50px -70px 0;
+    padding: 0;
+}
+
+
+
+
+
+#f_contact{
+	width: 600px;margin: 50px auto 0 auto;border: 1px solid #072546;
+}
+#f_contact p{
+	background-color: #072546;padding: 5px 0;margin: 0;color: #fff;text-align: center;
+}
+#f_contact div{
+	margin: 20px 0;
+	padding: 0;
+	text-align: center;
+}
+#f_contact div span{
+	font-size: 1.4em;padding-right: 10px;
+}
+#f_contact div strong{
+	font-size: 2em;
+}
+#f_contact div a{
+	font-size: 1.4em;
+}
+
+#f_contact a img:hover{opacity: 0.8;}
+
+
+
+
+
+
+
+/*footer
+----------------------------------------------------*/
+
+
+#footer{
+	width: 100%;
+	/*height: 200px;*/
+	margin: 30px 0 0 0;
+	padding: 0;
+	float: left;
+	/*background-color: #fff;*/
+	font-size: 12px;
+	color: #fff;
+	clear                : both;
+	box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.2) inset;
+	background: linear-gradient(#092847, #001E42);
+}
+#footer_main{
+	width: 960px;
+	margin: 10px auto 10px auto;
+	text-align: left;
+        border: 0px solid #fff;
+        overflow: auto;
+}
+#footer_main a{text-decoration: none;color: #fff;}
+#footer_main a:hover{text-decoration: underline;}
+
+#footer-left{
+    border-right: 1px solid #666666;
+    padding-right: 100px;
+    float: left;
+}
+#footer-right{
+    border: 0px solid #fff;
+    overflow: auto;
+    margin: 30px 0 10px 0;
+}
+#footer-right ul{margin: 10px 0 0 30px;padding: 0;}
+#footer-right ul li{list-style-type: none;}
+
+#footer2{
+	
+	height: 20px;
+	margin: 0;
+	padding-top: 5px;
+	font-size: 12px;
+	color: #666666;
+	text-align: center;
+	clear: both;
+	background-color: #fff;
+	/*box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.2) inset;*/
+
+}
+
+/*yahoo 解析*/

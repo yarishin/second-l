@@ -1,0 +1,132 @@
+
+.head_test {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    position:  relative;        /* 位置調整 */
+    font-weight:  normal;       /* 文字の太さ調整 */
+    /*font-size: 40px;*/            /* 文字サイズ指定 */
+    text-align:  center;        /* 文字位置指定 */
+    margin:  20px 0;            /* 周りの余白指定 */
+    display: inline-block;      /* インラインブロックにする */
+}
+
+.head_test:before {
+    content: '';                /* 空の要素を作る */
+    height: 1em;               /* 高さ指定 */
+    width: 2em;                /* 幅指定 */
+    border: solid 1px #cfc2ff;     /* 枠線指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    left:  -0.2em;                   /* 位置調整 */
+    top: -0.25em;                     /* 位置調整 */
+    margin:  auto;              /* 位置調整 */
+    z-index: -1;                /* 重なり調整 */
+}
+.head_test:after {
+    content: '';
+    height: 2em;
+    width: 2em;                /* 空の要素を作る */
+    /*height: 80px;*/               /* 高さ指定 */
+    /*width: 80px;*/                /* 幅指定 */
+    border: solid 1px #cfc2ff;     /* 枠線指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    right:  0;                  /* 位置調整 */
+    bottom:  0;                 /* 位置調整 */
+    margin:  auto;              /* 位置調整 */
+    z-index: -1;                /* 重なり調整 */
+}
+ 
+.head_test-wrap {
+    padding-bottom:  20px;      /* 余白指定 */
+    text-align:  center;        /* 文字位置指定 */
+}
+
+
+
+
+
+/* アコーディオンC */
+.cp_linetab {
+position: relative;
+overflow: hidden;
+width: 49%;
+margin: 0 3px;
+color: #fff;
+float:left;
+}
+
+.cp_linetab input {
+position: absolute;
+z-index: -1;
+opacity: 0;
+}
+
+.cp_linetab label {
+font-weight: bold;
+line-height: 3;
+position: relative;
+display: block;
+padding: 0 0 0 1em;
+cursor: pointer;
+margin: 0 0 1px 0;
+background: #53d1bd;
+border-radius:5px;
+}
+
+.cp_linetab .cp_linetab-content {
+overflow: hidden;
+max-height: 0;
+-webkit-transition: max-height 0.5s;
+transition: max-height 0.5s;
+color: #333333;
+background: #eaeaea;
+}
+
+.cp_linetab .cp_linetab-content p {
+margin: 1em;
+font-size: 14px;
+}
+
+.cp_linetab p{
+margin-bottom:0px;
+}
+
+/* :checked */
+.cp_linetab input:checked ~ .cp_linetab-content {
+max-height: 20em;
+}
+
+/*チェックのアイコン（↓）*/
+.cp_linetab label:after{
+color: #fff;
+font-family:"FontAwesome";
+content:" \f078";
+position: absolute;
+top: 0;
+right: 0;
+width: 2em;
+height: 3em;
+}
+
+/*チェックのアイコン（↑）*/
+.cp_linetab input:checked ~ label::after {
+color: #fff;
+font-family:"FontAwesome";
+content:" \f077";
+}
+
+
+input[type="image"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+.sam13 a { display:block;
+width: 100%; /* 横幅 */
+background-color:#B2DBBF;
+border:2px solid #00171F;
+padding:10px; /* a要素内の余白 */
+}
+
+.sam13 a:hover { background-color: #247BA0;
+ color:#222222; }

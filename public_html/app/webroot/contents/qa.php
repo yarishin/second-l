@@ -1,0 +1,481 @@
+<?php
+require_once "../../Controller/Component/CommonTag.php";
+CommonTag::includeFiles();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><?php echo SITE_TITLE; ?>｜よくある質問</title>
+	<link href="../favicon.ico" type="image/x-icon" rel="icon" />
+	<link href="../favicon.ico" type="image/x-icon" rel="shortcut icon" />
+	<link rel="stylesheet" type="text/css" href="../css/import.css" />
+	<script type="text/javascript" src="../js/tl_cont.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300&display=swap&subset=japanese" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+</head>
+<body>
+
+<?php CommonTag::header(); ?>
+    
+    <div class="g-bg-color--sky-light">
+		<div class="container g-padding-y-80--xs g-padding-y-125--xsm">
+			
+			<div style="margin: 0;position: relative;z-index: 1;">
+				<div id="page-title" class="wow slideInUp" data-wow-duration="2s" data-wow-delay="0">よくある質問</div>
+				<div id="page-title-mask" class="wow slideOutDown hidden-md" data-wow-duration="3s" data-wow-delay=".2s"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0">
+
+			<h1 style="font-size:1.2em;color:#337ab7;position: relative;z-index: 2;">仕組み</h1>
+			</div>
+			</div>
+
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0">
+		<div id="accordion" class="accordionbox g-margin-b-0--xs g-margin-b-0--lg" style="position: relative;z-index: 2;">
+			<dl class="accordionlist">
+		
+				<dt class="clearfix">
+					<div class="title">
+						<p>不動産特定共同事業法とはなんですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					不動産特定共同事業に参加する出資者の保護を目的とした法律です。
+				</dd>
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>不動産特定共同事業とはなんですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						不動産特定共同事業とは、不動産特定共同事業者が出資者から出資を受け、現物不動産を取得し、当該不動産の売買や賃貸等から生ずる収益を出資者に分配する事業のことをいいます。<br>不動産特定共同事業を行うには、行政当局から許可を得ることが必要となります。<br>当社は不動産特定共同事業の第1号及び第2号の許可を得ており、電子取引業務を行います。
+					</div>
+				</dd>
+			
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>どのような仕組みですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						不動産特定共同事業における電子取引業務では、オンラインを通じて不特定多数の出資者から資金を集め、その資金を基に現物不動産を取得し、当該不動産の売買や賃貸等から生ずる収益を出資者に分配する仕組みです。
+					</div>
+				</dd>
+
+			
+
+			<h1 style="font-size:1.2em;color:#337ab7;margin-top:3em;">会員登録・出資者登録</h1>
+
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>登録に費用はかかりますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						登録は無料です。
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>会員登録と出資者登録の違いはなんですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						<span style="font-weight:600;">＜会員登録＞</span><br>メールアドレス・パスワード等をご登録いただきます。ファンドの詳細情報がご覧いただけますが出資はできません。<br><br>
+						<span style="font-weight:600;">＜出資者登録＞</span><br>出資をするために必要な情報のご登録や確認書類をアップロードいただきます。当社から送付する「本人確認キー」の入力・送信をもって完了し、出資が可能になります。
+					</div>
+				</dd>
+
+
+						
+				<dt class="clearfix">
+					<div class="title">
+						<p>出資者登録時に必要な書類はなんですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						下記確認書類が必要です。<br>
+						・本人確認書類　　　　　・・・2点<br>
+						・マイナンバー確認書類　・・・1点<br>
+						・銀行確認書類　　　　　・・・1点<br>
+						が必要になります。くわしくは<a href="c_documents.php" target=" _blank">コチラ</a>をご確認ください。
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>確認書類のアップロードができません。</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						取り扱い可能なファイルの形式とサイズをご確認ください。<br>
+						＜取り扱い可能ファイル＞<br>
+						形式　：.jpg  / .gif  /.png<br>
+						サイズ：最大8MBまで
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>海外に住んでいますが出資者登録はできますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					現段階では日本居住者のみのサービスであり、出資者登録はできません。
+				</dd>
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>登録した内容を変更するにはどうしたらいいですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						変更項目によってお手続が異なります。各種変更を希望される方は、<a href="<?php echo URL_CONTACT_PAGE ?>" target=" _blank">お問い合わせ</a>よりその旨ご連絡ください。
+					</div>
+				</dd>
+			
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>メールアドレスを変更するにはどうしたらいいですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						マイページ＞会員情報の上部「基本情報の変更を希望される方はこちら」よりお進みください。
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>IDとは何ですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						会員登録完了のメールに記載している数字8桁のものです。パスワードを忘れた場合など、IDを使用してパスワードの再発行が可能です。<br>
+						通常のログイン時はメールアドレスもしくはIDにてログインが可能です。
+					</div>
+				</dd>
+						
+				<dt class="clearfix">
+					<div class="title">
+						<p>メールが届かないのはどうしてですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						迷惑メールボックスに分類されていないかご確認ください。<br>
+						「7-star.co.jp」のドメインからのメール受信を許可にしてください。
+					</div>
+				</dd>
+				<h1 style="font-size:1.2em;color:#337ab7;margin-top:3em;">出資</h1>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>匿名組合契約とはなんですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						出資者が営業者の営業のために出資をし、営業者がその営業から生ずる利益を分配する契約をいいます。不動産特定共同事業によって取得した不動産の所有権・賃借権等はすべて営業者に帰属し、事業リスクは営業者が負うことになります。
+					</div>
+				</dd>			
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>出資の流れはどのようになりますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<a href="<?php echo URL_FLOW_PAGE ?>" target=" _blank">コチラ</a>の出資方法ご確認ください。
+				</dd>
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>出資金の元本保証はされますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						元本は保証されません。<br>出資金は対象不動産の売却資金を含む損益から償還されます。そのため、不動産市場の影響・経済情勢等によって対象不動産の価格が下落した場合等、お客様の出資金元本の一部又は全部が毀損するなどの損失が発生する可能性があります。
+					</div>
+				</dd>
+			
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>不動産特定共同事業商品の情報はどこで確認できますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						不動産特定共同事業商品（以下、「ファンド」といいます。）一覧ページから希望する商品の詳細ページをご確認ください。また、会員登録いただければより詳細な情報もご確認いただけます。
+
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>利回りは確定ですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						利回りは確定しておりません。表示している利回りは想定利回りとなります。
+					</div>
+				</dd>
+						
+				<dt class="clearfix">
+					<div class="title">
+						<p>配当日はいつですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						ファンドごとに異なります。ファンドごとの詳細ページをご確認ください。利益分配金は源泉徴収（20.42％）後、当社にご登録いただいている預金口座へお振込みします。
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>運用期間はどのくらいですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						ファンドごとに異なります。ファンドごとの詳細ページをご確認ください。但し、不動産の運用状況により運用期間は変更される場合があります。 
+					</div>
+				</dd>			
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>出資申込後のキャンセルは出来ますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					出資申込後のキャンセルはお受けできませんので、出資申込前にファンドの内容および契約成立前書面をよくご確認の上お申し込みください。
+				</dd>
+			
+							
+				<dt class="clearfix">
+					<div class="title">
+						<p>出資金額以外に係る費用はありますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						ファンドへの出資に係る申込手数料は発生いたしません。但し、不動産特定共同事業契約に係る地位の譲渡や名義書換を行う場合には、別途手数料が発生いたします。<br>
+							<span style="font-size:0.8em;">※ご入金いただく際の振込手数料はお客様負担となります。<br>
+							※解約時の出資金払戻しの際の振込手数料はお客様負担となります。運用終了後の出資金払戻しの際の振込手数料は当社が負担いたします。</span>
+
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>出資金額の振込先銀行はどこですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						ジャパンネット銀行です。<br>
+						振込先口座等の詳細情報は「出資の確定のご連絡」に記載させていただきます。
+					</div>
+				</dd>
+						
+				<dt class="clearfix">
+					<div class="title">
+						<p>クーリング・オフとはなんですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						お客様は契約成立時書面（不動産特定共同事業法第25条）の交付または電磁的方法による当該書面の提供を受けた日から起算して8日を経過するまでの間、事業者であるセブンスター株式会社に対して通知することにより当該契約を解除することができます。<br>クーリング・オフの手続きについては<a href="<?php echo URL_COOLINGOFF_PAGE ?>" target=" _blank">コチラ</a>よりご確認ください。
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>早期償還はありますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						ファンドの運用終了予定日より早く不動産売却に至った場合には、予定より早く出資金の払戻しを行うことになります。予定より運用期間が短くなる場合、利益分配金の総額は当初予定より少なくなります。 
+					</div>
+				</dd>			
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>解約はできますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					やむを得ない事由がある場合のみ中途解約が可能です。詳しくは<a href="<?php echo URL_SERVICETERMS_PAGE ?>" target=" _blank">利用規約</a>をご確認ください。
+				</dd>
+			
+				<h1 style="font-size:1.2em;color:#337ab7;margin-top:3em;">その他</h1>
+
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>年間取引報告書はいつ頃発行されますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						毎年1月下旬に発行予定です。<br>ログイン後、マイページ＞お知らせ　よりご確認ください。書面での発行を希望される方は、<a href="<?php echo URL_CONTACT_PAGE ?>" target=" _blank">お問い合わせ</a>よりその旨ご連絡ください。<br><span style="font-size:0.8em;">※書面での発行は 1回／年 は無料です。2回目以降は有料になります。ご了承ください。</span>
+					</div>
+				</dd>
+			
+			
+				<dt class="clearfix">
+					<div class="title">
+						<p>税金の取り扱いは何ですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						利益分配金は雑所得で総合課税扱いとなります。当該分配金は源泉徴収後の金額をお振込みさせていただきます。確定申告の要否に関しては国税庁のサイト等ご確認ください。<br><span style="font-size:0.8em;">※給与所得及び退職所得以外の所得の金額合計額が20万円を超える方は確定申告をする必要があります。</span>
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>譲渡はできますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						セカンドライフの出資者登録が完了している方であれば、契約上の地位を譲渡することが可能です。なお、事業者は正当な理由なくこれを拒否できませんが、理由がある場合には譲渡ができない場合もあります。お手続きを希望される方は<a href="<?php echo URL_CONTACT_PAGE ?>" target=" _blank">お問い合わせ</a>よりお問い合わせください。
+					</div>
+				</dd>
+						
+				<dt class="clearfix">
+					<div class="title">
+						<p>相続手続きはどのようにしたらいいですか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						相続が発生した場合には、契約の解除もしくは相続人様への名義書換が必要になります。お手続きが必要になられた方は<a href="<?php echo URL_CONTACT_PAGE ?>" target=" _blank">お問い合わせ</a>よりお問い合わせください。
+
+					</div>
+				</dd>
+
+				<dt class="clearfix">
+					<div class="title">
+						<p>退会はできますか？</p>
+					</div>
+					<p class="accordion_icon"><span></span><span></span></p>
+				</dt>
+				<dd>
+					<div>
+						出資中のファンドがなければ退会いただけます。<a href="<?php echo URL_CONTACT_PAGE ?>" target=" _blank">お問い合わせ</a>よりお問い合わせください。
+					</div>
+				</dd>
+			
+			</dl>
+		</div>
+	</div>	
+</div>
+
+</div>
+
+
+
+
+
+    
+<?php CommonTag::footer(); ?>
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.back-to-top.min.js"></script>
+	<script src="../js/header-sticky.min.js"></script>
+	<script src="../js/jquery.wow.min.js"></script>
+	<script src="../js/wow.min.js"></script>
+
+
+	<script type="text/javascript">
+	//<![CDATA[
+	function buttonClick(eventId) {
+		var flag = true;
+		if ('e020301' == eventId) {
+		}
+		if (flag) {
+			document.getElementById('event_id').value = eventId;
+			document.form.submit();
+		}
+	}
+	//]]>
+
+	$(function(){
+		$(".accordionbox dt").on("click", function() {
+			$(this).next().slideToggle();	
+			// activeが存在する場合
+			if ($(this).children(".accordion_icon").hasClass('active')) {			
+				// activeを削除
+				$(this).children(".accordion_icon").removeClass('active');				
+			}
+			else {
+			// activeを追加
+			$(this).children(".accordion_icon").addClass('active');			
+			}
+		});
+	});
+
+
+	</script>
+
+</body>
+</html>

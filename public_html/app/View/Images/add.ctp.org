@@ -1,0 +1,281 @@
+<?php echo $this->Html->script('img', array('inline' => false)); ?>
+<?php echo $this->Html->script('up_img', array('inline' => false)); ?>
+<?php $this->Html->css('mypage.css', array('inline' => false)); ?>
+
+<div class="g-bg-color--sky-light">
+	<div class="container g-padding-y-80--xs g-padding-y-125--sm">
+
+		<div class="row" style="border-bottom:1px solid #ccc;">
+
+			<div class="col-xs-12 visible-xs" style="margin-bottom:1.5em;">
+				<p style="color:#333333;text-align:center;margin-top:1em;font-size:1.5em;">必要書類提出</p>
+				<img class="img-responsive center-block animated pulse" style="line-height: 0;width:50%;" src="../img/shinki3_1.png" alt="出資者情報登録の流れ図">
+
+			</div>
+
+			<div class="col-lg-2 col-lg-offset-2 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 hidden-xs" style="margin-bottom:1em;">
+				<div class="row">
+					<div class="col-lg-10 col-md-10 col-sm-10">
+						<p class="g-font-size-16--sm g-font-size-14--lg" style="color:#6d6d6d;text-align:center;margin:0;">会員登録</p>
+						<img class="img-responsive center-block" style="line-height: 0;" src="../img/shinki1_2.png" alt="出資者情報登録の流れ図">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2" style="padding-top:2.5em;padding-left:0;">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size:30px;color:#6d6d6d;"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-3 col-sm-3 hidden-xs">
+				<div class="row">
+					<div class="col-md-10 col-sm-10 g-font-size-10--md">
+						<p class="g-font-size-16--sm g-font-size-14--lg" style="color:#6d6d6d;text-align:center;margin:0;">出資者情報登録</p>
+						<img class="img-responsive center-block" style="line-height: 0;" src="../img/shinki2_2.png" alt="出資者情報登録の流れ図">
+
+					</div>
+					<div class="col-md-2 col-sm-2" style="padding-top:2.5em;padding-left:0;">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size:30px;color:#6d6d6d;"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-3 col-sm-3 hidden-xs">
+				<div class="row">
+					<div class="col-md-10 col-sm-10 g-font-size-10--md">
+						<p class="g-font-size-16--sm g-font-size-14--lg" style="color:#333333;text-align:center;margin:0;font-size:1.5em;"><b>必要書類提出</b></p>
+						<img class="img-responsive center-block animated pulse" style="line-height: 0;" src="../img/shinki3_1.png" alt="出資者情報登録の流れ図">
+ 
+					</div>
+					<div class="col-md-2 col-sm-2" style="padding-top:2.5em;padding-left:0;">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size:30px;color:#333333;"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-3 col-sm-3 hidden-xs">
+				<div class="row">
+					<div class="col-lg-10 col-md-10 col-sm-10">
+						<p class="g-font-size-14--lg g-font-size-14--sm" style="color:#6d6d6d;text-align:center;margin:0;">本人確認キー入力</p>
+						<img class="img-responsive center-block" style="line-height: 0;" src="../img/shinki4_2.png" alt="出資者情報登録の流れ図">
+
+					</div>
+				</div>
+			</div>
+                                 
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div id="page-title" style="margin:1em auto;">
+					確認書類アップロード
+				</div>
+			</div> 
+		</div>
+
+<!--まとめ-->
+<div class="row" style="margin-bottom:0.5em;">
+<div class="col-lg-10 col-lg-offset-1">
+<a class="btn btn-info btn-lg btn-block" style="white-space:normal;" href="../../contents/c_documents.php" target="_blank">各種確認書類についてはこちらをご確認ください。</a>
+
+</div>
+</div>
+
+
+
+<!--まとめend-->
+
+                
+
+
+
+<div class="row">
+	<div class="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1" style="background-color:#def8ff;padding:1em;border-radius:15px;">
+
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+
+		<?php echo $this->Form->error('Image.img');?>
+		<?php 
+			echo $this->Form->create('Image', array(
+                                       'type' => 'file',
+                                       'class' => 'form-horizontal',
+                                       'inputDefaults' => array(
+                                                                'legend' => false, 
+                                                                 'label' => false, 
+                                                                 'div' => false),));?>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+
+
+
+		<div class="col-lg-3 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" style="height:10em;">
+                   <?php echo $this->Form->hidden('Image.title', array(
+                                                                          'default' => $user_id
+                                                                          )); ?> <!-- ユーザーIDをデータベースに書き込み-->
+
+			<div style="margin-bottom:2.5em;"><p style="color:#337ab7;"><b>１．確認書類を項目から指定</b><span class="glyphicon glyphicon-forward hidden-xs hidden-sm hidden-md" aria-hidden="true" style="margin-left:1em;"></span></p>
+			</div>
+       
+         	
+                <?php echo $this->Form->select('Image.body',array(
+                                  '===本人確認書類===' => '===本人確認書類===',
+                                  'マイナンバーカード（表）' => 'マイナンバーカード（表）',
+                                  '免許証（表もしくは裏）' => '免許証（表もしくは裏）',
+                                  '健康保険証（表もしくは裏）' => '健康保険証（表もしくは裏）',
+                                  '在留カード（表もしくは裏）' => '在留カード（表もしくは裏）',
+                                  '特別永住者証明書（表もしくは裏）' => '特別永住者証明書（表もしくは裏）',
+                                  '国民年金手帳（必要ページ）' => '国民年金手帳（必要ページ）',
+                                  '身体障害者手帳（必要ページ）' => '身体障害者手帳（必要ページ）',
+                                  'その他（領収書など）' => 'その他（領収書など）',
+                                  '=マイナンバー確認書類=' => '=マイナンバー確認書類=',
+                                  'マイナンバーカード（裏）' => 'マイナンバーカード（裏）',
+                                  '通知カード（表）' => '通知カード（表）',
+                                  '通知カード（裏）' => '通知カード（裏）',
+                                  '==口座情報確認書類==' => '==口座情報確認書類==',
+                                  '口座情報確認書類（通帳等）' => '口座情報確認書類（通帳等）'),
+
+                            array('empty' => '項目を選んでください')
+                                  
+                   ); ?>
+ 
+     	
+		</div>
+
+		<div class="col-lg-3 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" style="height:10em;">
+			<div style="margin-bottom:2em;"><p style="color:#337ab7;"><b>２．ファイルを選択</b><span class="glyphicon glyphicon-forward hidden-xs hidden-sm hidden-md" aria-hidden="true" style="margin-left:1em;"></span></p>
+			</div>
+
+			<label class="control-label" for="fileInput"></label>
+                <?php echo $this->Form->file('Image.img', array('id' => 'fileInput', 'class' => 'input-file uniform_on'));?>
+<p style="font-size:12px;">※「.jpg/.gif/.png」のみアップロード可能。<br>
+※最大サイズ8MBまで。</p>
+		</div>
+
+		<div class="col-lg-3 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" style="min-height:10em;padding-bottom:0.5em;">
+			<div style="margin-bottom:2.5em;">
+				<p style="color:#337ab7;"><b>３．画像を確認</b><span class="glyphicon glyphicon-forward hidden-xs hidden-sm hidden-md" aria-hidden="true" style="margin-left:1em;"></span></p>
+			</div>
+			<div class="controls"><pp></pp></div>  <!-- サムネイル画像表示 -->
+			<p style="color:#f00;font-size:12px;">※一度アップロードすると画像の削除はできませんので、必ずご確認ください。</p>
+		</div>
+             
+		<div class="col-lg-3 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" style="height:10em;">
+			<div style="margin-bottom:2.5em;">
+				<p style="color:#337ab7;"><b>４．[アップロード]を押す</b></p>
+			</div>
+				<?php echo $this->Form->end('アップロード');?>
+
+		</div>
+
+</div>
+
+		<div class="col-lg-12 col-md-12 text-center">
+			<p style="font-size:1em;color:#a94442;"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span><b>1～4の手順を繰り返し、必要な枚数画像のアップロードをしてください。<br>アップロードが全て完了しましたら、[送信してアップロードを完了する]を押してください。</b></p>
+		</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+     
+ <form id="form" name="form" method="post" action="<?php echo $action ?>" style="margin-top:0;">
+<?php
+
+      if (count($images) <=0) {
+
+}else{
+print "
+ 
+	<div class=\"row\" style=\"margin-top:1em;\">
+		<div class=\"col-md-10 col-md-offset-1\">
+			<div class=\"row\">
+				<div class=\"col-md-5 col-sm-6 col-xs-12\">
+			<p class=\"g-font-size-26--xs g-font-size-22--sm g-font-size-22--lg\"><span class=\"glyphicon glyphicon-file\" aria-hidden=\"true\"></span><b>アップロード済画像一覧</b></p>
+				</div>
+				<div class=\"col-md-5 col-md-offset-2 col-sm-6 col-sm-offset-0 col-xs-12\">
+
+
+
+
+
+<input type=\"submit\" style=\"font-size:1em;\" class=\"g-box-shadow__dark-lightest-v4 text-uppercase s-btn s-btn--xs s-btn--orange-bg g-radius--50 g-padding-x-50--xs g-margin-b-20--xs pull-right\" value=\"送信してアップロードを完了する\" onclick=\"buttonClick('<?php echo EVENT_ID_040010090 ?>');\" tabindex=\"44\">
+
+
+		          
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<div class=\"row\">
+		<div class=\"col-md-10 col-md-offset-1\">
+
+
+					<p style=\"font-size:0.8em;text-align:right;margin-bottom:0;margin-top:0;color:#f00;\">※[送信してアップロードを完了する]は一回のみ行ってください。複数回送信された場合は、本人確認に時間を要する場合がございます。</p>
+
+	<table style=\"width:100%;\">
+        <tr>
+                <th style=\"background-color:#333;padding:0.5em;color:#fff;border-radius:10px 0 0 0;\">確認書類</th>
+                <th style=\"background-color:#333;padding:0.5em;color:#fff;\">アップロード済画像</th>
+
+                <th style=\"background-color:#333;padding:0.5em;color:#fff;border-radius:0 10px 0 0;\">アップロード日</th>
+        </tr>
+
+
+
+
+
+";
+}
+?>
+
+      </form>
+      
+                                <input type="hidden" id="<?php echo HIDDEN_ID_000000010 ?>" name="<?php echo HIDDEN_ID_000000010 ?>" value="">
+
+
+	
+        <?php foreach($images as $image): ?>
+        <tr>
+                <td style="border-bottom:1px solid #ccc;padding:0.5em;background-color:#fff;"><?php echo $image['Image']['body'];?></td>
+<td style="border-bottom:1px solid #ccc;padding:0.5em;background-color:#fff;"><img src="<?php echo $this->Upload->uploadUrl($image['Image'], 'Image.img', array('style' => 'small'));?>" onclick="imgwin('<?php echo $this->Upload->uploadUrl($image['Image'], 'Image.img', array('style' => 'original'));?>')" /></td>      
+
+
+                <td style="border-bottom:1px solid #ccc;padding:0.5em;background-color:#fff;"><?php echo $image['Image']['created'];?></td>
+        </tr>
+        <?php endforeach;?>
+
+
+	</table>
+		
+		
+
+		<div class="row" style="margin-top:4em;">
+			<div class="col-md-12 col-sm-12 text-center">
+				<span style="font-size:0.9em;">個人情報の提供・委託・開示などの請求に関する取扱いについては<a href="<?php echo URL_PRIVACY_PAGE ?>" target="_blank">「個人情報保護方針」</a>をご覧ください。</span>
+			</div>
+		</div>
+		</div>
+
+
+
+	</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,205 @@
+<?php
+require_once "../../Controller/Component/CommonTag.php";
+CommonTag::includeFiles();
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>Trust Lending ｜エーアイトラストが運営するソーシャルレンディングサービス トラストレンディング｜金融型クラウドファンディング</title>
+<meta http-equiv="refresh" content="0; URL='https://www.trust-lending.net/'" />
+<meta name="copyright" content="TrustLending" />
+<meta name="keywords" content="クラウドファンディング,ソーシャルレンディング,資産運用,投資,利回り,不動産投資,エーアイトラスト,トラストレンディング,金融,ファンド,貸金" />
+<meta name="Description" content="エーアイトラストが運営するソーシャルレンディングサービスTrustLending。資産運用に10万円からの少額投資が可能。" />
+
+<link rel="stylesheet" type="text/css" href="../css/lp.css" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="../js/tl_cont.js"></script>
+
+<script src="../js/Chart.js"></script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+	<h1 style="float: left;"><a href="<?php echo URL_SITE_TOP ?>">ソーシャルレンディング｜Trust Lending｜トラストレンディング</a></h1>
+	<div style="margin: 0;padding: 10px 0 0 0;float: right;color: #666666;"><font style="font-size: 12px;">電話でのお問い合わせ</font>　03-6453-9969</div>
+	<div style="margin: 0;padding: 0;width: 100%;line-height: 0;">
+		<img src="../img/lp_header.jpg" class="header_img" alt="トラストレンディング" style="margin-bottom: 30px;"><br />
+
+
+
+
+			<!--<a href="<?php echo URL_LANDINGPAGE_PAGE ?>tokuten/2017090108.php"><img src="../img/campaign008_2.jpg" class="header_img2" alt="トラストレンディング" title="新規会員特典"></a>-->
+
+
+</div>
+<!--沖縄支店開設キャンペーン画像
+<div class="campaign_banner"><a href="<?php echo URL_REGISTRATION_PAGE ?>"><img src="../../img/okinawa_cp.png" alt="新規会員特典"></a></div>
+-->
+
+
+<!--被災地支援-->
+<div class="campaign_banner"><img src="../../img/hisaitishien2.jpg" alt="被災地支援"></div>
+
+
+
+	
+	<!--<div id="shinki_button">
+		<a href="<?php echo URL_REGISTRATION_PAGE ?>"><img src="../img/bt_shinki_03.jpg" alt="新規会員登録はこちら"></a>
+	</div>-->
+
+<!--
+
+<h1_a>トラストレンディングの運用実績</h1_a>
+
+-->	
+<!--棒グラフ
+<table>
+<tr><td>
+<div style="width: 400px;padding: 15px">
+    <canvas id="chart" max-height="250" max-width="400"></canvas>
+<br>※）累計金額 単位：千万円</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+var barChartData = {
+    labels : ["2016/03","2016/07","2016/11","2017/03","2017/07"],
+    datasets : [
+      {
+		label: "My First dataset",//項目名
+        fillColor : /*"#d685b0"*/"rgba(244,141,85,1.0)",
+        strokeColor : /*"#d685b0"*/"rgba(214,133,176,0.7)",
+        highlightFill: /*"#eebdcb"*/"rgba(228,67,27,1.0)",
+        highlightStroke: /*"#eebdcb"*/"rgba(238,189,203,0.7)",
+        data : [44,67,110,170,220]
+      },
+    ]
+
+  }
+
+
+  window.onload = function(){
+    var ctx = document.getElementById("chart").getContext("2d");
+    window.myBar = new Chart(ctx).Bar(barChartData, {
+      responsive : true,
+      // アニメーション
+      /* animation : false */
+    });
+  }
+</script>
+</td>
+<td>
+<h3>～エーアイトラストが選ばれる理由～</h3>
+累計成約金額が2,000,000,000円を突破！<br>
+お客様に選ばれるには理由があります。<br>
+<a href="<?php echo URL_REGISTRATION_PAGE ?>"><img src="../img/bt_shinki_03.jpg" alt="新規会員登録はこちら" width="50%"></a>
+</td></tr>
+</table>
+
+
+
+グラフここまで-->
+
+
+	<img src="../img/lp_img001.gif" id="lp_2" alt="運用利回り年4%～12%、運用期間3～24ヶ月、10万円からの少額投資、金融型クラウドファンディング">
+	
+	<dl>
+		<dd>
+			<span>Trust Lending</span>（トラストレンディング）は、<a href="http://www.ai-trust.net/" target="_blank">エーアイトラスト株式会社</a>が運営するソーシャルレンディングサービスを提供するサイトです。 ソーシャルレンディングとは、クラウドファンディングのうち、金融型（投資・株式・融資）に分類されるもので、インターネットを利用し投資家が特定の企業の金銭の貸金事業へ出資をおこない、その事業からの収益を投資家の出資比率に応じて分配するものです。<br>
+			当社は、Trust Lending（トラストレンディング）を利用し、当社が行う金銭の貸付事業へ出資をして資産運用を行いたいという意向のお客様を募集しております。 当社が行う金銭の貸付事業において、これまで培った知識と経験を生かし、当社が適格であると判断した資金需要者との取引を通じて、経済活動をサポートし、日本経済の更なる発展の一助になるべく尽力してまいります。
+		</dd>
+		<dd>
+			<img src="../img/shikumi.jpg" alt="トラストレンディングの流れ">
+		</dd>
+		
+		<dt><img src="../img/lp_img003.gif" alt="クラウドファンディングとは？"></dt>
+		<dd class="lp_text">
+			<p>
+				クラウドファンディングとは、群衆（crowd）と資金調達（funding）を組み合わせた造語で、ある目的のために、インターネットを通じて不特定多数の人から資金の出資や協力を募ることをいいます。その形態は、「購入型」「寄付型」「金融型」の３つに分類されます。
+			</p>
+			
+			<div class="lp_box1">
+				<strong>購入型</strong><small>（報酬型）</small>
+				<p>ファン（支援者）がプロジェクトへ出資し、そのリターンとして支援金額に応じた金銭以外の商品やサービスが手に入ります。</p>
+			</div>
+			<div class="lp_box1">
+				<strong>寄付型</strong><small>　</small>
+				<p>その名の通り、プロジェクトに対して出資を行いますが、あくまでも「寄付」であるためリターンは発生しません。</p>
+			</div>
+			<div id="lp_box2">
+				<strong>金融型</strong><small>（投資・株式・融資型）</small>
+				<p>出資者が特定の企業などに出資を行い、リターンとして金銭(配当や利益の一部)又は株式が発行されます。</p>
+				<b>※ 当社はこちらです</b>
+			</div>
+		</dd>
+		
+		<dt><img src="../img/lp_img004.gif" alt="トラストレンディングの特徴"></dt>
+		<dd class="lp_text">
+			<p>
+				当社では、投資家保護の観点から出資先に対する審査を厳格に行うとともに、リスク軽減を目的とした担保の確保(一部無担保の商品あり)と複数の貸付債権をひとつのファンドとして商品化しております。運営会社であるエーアイトラストでは法人向け金融サービスを行っており、主に債権担保融資・不動産担保融資・金融システム開発・Ｍ＆Ａ・金融コンサルティングなどの事業を展開してまいりました。これまでお取引させていただいた法人様には様々な業種があり、金融業をはじめ不動産業・建設業・小売業・サービス業・製造業・通信業など業種や会社規模の大小に関わらず多くの取引先様に支えられてきました。様々な案件を取扱い、そこで得た知識と経験を当社の強味とし、投資家と資金需要者とを繋ぐ新しいプラットホームであるトラストレンディングを展開してまいります。宣伝広告にはテレビＣＭや大型看板などは使わず、ｗｅｂ中心で主にＳＮＳを利用し、宣伝広告費を極力抑えたアプローチを行い、投資家への高利回り配当の実現を目指しております。
+			</p>
+			<div style="padding: 30px 0 0 0;text-align: center;"><img src="../img/lp_img008.gif" alt="トラストレンディングの特徴"></div>
+		</dd>
+		<dd class="lp_text">
+			<div id="caution">
+				<h3>◆ 投資に関するご注意</h3>
+				<ul>
+					<li>Trust Lending の投資は元本が保証されるものではありません。借入人の債務不履行等により、元本に欠損が生じるおそれがあります。出資にあたっては、約款及び契約締結前交付書面等の重要書面をよくご確認いただき、ご自身で出資の判断をしていいただきますよう宜しくお願い申し上げます。</li>
+					<li>本サービスの会員登録及び出資いただく際の取引手数料はいただいておりません。ファンドでの収益が生じた場合のみ所定の営業者報酬を頂戴いたします。尚、営業者報酬の額は各ファンド毎に異なるため、事前にその額を示すことができません。</li>
+				</ul>
+			</div>
+		</dd>
+		
+		<dt><img src="../img/lp_img005.gif" alt="トラストレンディングのビジョン"></dt>
+		<dd class="lp_text">
+			<p>
+				トラストレンディングは、非対面型で取引のほとんどをインターネット上で完結できるサービスです。現在、さまざまな金融商品が存在し、インターネットでの取引がごく当たり前となりましたが、実際に資金調達が可能な企業は厳しい審査と条件をクリアした企業に限られています。設立間もないいわゆるベンチャー企業や小規模の企業にとって資金調達は大きな課題です。運転資金・新規事業・事業拡大など、急を要する資金繰りなどにも対応可能なサービスとしてソーシャルレンディングはかなり有効な手段だと考えます。現在の知名度は低くまだまだニッチな市場ですが、近年スマートフォンの出現によりインターネット利用者が増えたこと、少額から始められる投資サービスが増えたこと、インターネットを使った投資サービスの利用者が増えたことなどから、今後大きく飛躍する可能性が高い市場であるといえます。
+				トラストレンディングでは、ソーシャルレンディングという資産運用方法を広く提案し、投資がより身近で信頼される取引ができるプラットホームとなること、取引を通じ経済活動をサポートし、日本経済の一助となるべく追力することが私どもの使命だと考えています。
+			</p>
+		</dd>
+		
+		<dt><img src="../img/lp_img006.gif" alt="取引開始までの流れ"></dt>
+		<dd style="text-align: center;">
+			<img src="../img/lp_img007.gif" style="margin-top: 50px;" alt="取引開始までの流れ図">
+		</dd>
+		
+	</dl>
+<!--	
+		<div id="shinki_button">
+			<a href="<?php echo URL_REGISTRATION_PAGE ?>"><img src="../img/bt_shinki_03.jpg" alt="新規会員登録はこちら"></a>
+		</div>
+-->
+	
+	<div id="f_contact">
+		<p><b>トラストレンディングに関する問合せ先</b></p>
+		<div>
+			<b>エーアイトラスト株式会社</b><br>
+			第二種金融商品取引業者（金商）第2601号<br>
+			一般社団法人第二種金融商品取引業協会　加入<br>
+		</div>
+
+		<div><span>TEL</span><strong>03-6453-9969</strong><br><small>（受付時間：平日10：00～18：00）</small></div>
+		<div>
+			<a href="<?php echo URL_CONTACT_PAGE ?>"><img src="../img/bt_contact_01.gif" alt="お問い合わせフォーム"></a>	
+		</div>
+	</div>
+	
+		<!--<div style="margin-top: 50px;">
+		<a href="<?php echo URL_LANDINGPAGE_PAGE ?>tokuten/2016063007.php"><img src="../img/campaign008_2.jpg" class="header_img2" alt="トラストレンディング" title="新規会員特典"></a>
+	</div>-->
+		
+
+	
+</div> <!--wrapper end-->
+
+
+<?php CommonTag::footer(); ?>
+
+</body>
+</html>
+
+

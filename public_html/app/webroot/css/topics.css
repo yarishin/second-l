@@ -1,0 +1,143 @@
+/*トピックス｜お知らせ*/
+#topics_area{
+    /*font-size: 12px;*/
+    text-align: left;
+    color: #333333;
+    border: 0px solid #666666;
+    margin: 0 0 50px 0;
+    padding: 10px;
+}
+
+#ta_left{ /*左カラム*/
+    border: 1px solid #826905;
+    width: 200px;
+    height: 500px;
+    float: left;
+    font-size: 14px;
+    overflow: auto;
+}
+#ta_left p{
+    margin: 0;
+    text-align: center;
+    padding: 8px 0;
+    background: linear-gradient(#826905, #AD940E);
+    font-weight: bold;
+    color: #fff;
+}
+
+#ta_left ul{margin: 0;padding: 0;}
+#ta_left ul li{list-style-type: none;}
+
+#ta_left ul li a{display: block;}
+
+.ta_left_title{
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+    border-top: 1px solid #826905;
+    border-left: 7px solid #826905;
+    border-right: 1px solid #826905;
+    border-bottom: 1px solid #826905;
+}
+.ta_left_title a{text-decoration: none;color: #333333;padding: 5px 0;}
+
+.ta_left_month{text-indent: 10px;border-bottom: 1px solid #999999;margin: 5px 10px;}
+.ta_left_month small{font-size: 10px;}
+.ta_left_month a{text-decoration: none;color: #333333;padding: 5px 0 0 0;}
+.ta_left_month a:hover{opacity: 0.6;}
+
+
+#ta_main{
+    border: 0px solid #666666;
+    overflow: auto;
+}
+
+
+/*お知らせ一覧ページ　toppage.cssにも記載あり*/
+#ta_main_list{
+    border: 0px solid #cccccc;
+    margin: 0 0 0 30px;
+    font-size: 12px;
+}
+
+#ta_main_list h2{
+    margin: 0;
+    padding: 5px 10px;
+    background: linear-gradient(#003366, #6699cc);
+    text-shadow: 1px 1px 5px #000000;
+    /*letter-spacing: 5px;*/
+    color: #fff;
+}
+
+#ta_main_list ul{margin: 0;padding: 0;}
+#ta_main_list ul li{
+    border-bottom: 1px solid #cccccc;
+    list-style-type: none;
+    padding: 5px 10px;
+    margin: 10px;
+}
+#ta_main_list ul li:hover{opacity: 0.5;}
+#ta_main_list ul li a{text-decoration: none;}
+
+#ta_main_list ul li span{display: block;overflow: auto;}
+
+/*お知らせ一覧ページ　ここまで*/
+
+
+/*お知らせ詳細ページ*/
+#ta_text-r{text-align: right;}
+#ta_main-title{
+    border-left: 5px solid #cc0000;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#ta_sub-title{
+    border-left: 3px solid #999999;
+    margin: 20px 5px 10px 5px;
+    padding: 5px 0;
+    text-indent: 10px;
+    font-weight: bold;
+    background: #F2F2F2;
+}
+
+#ta_shousai{border-top: 1px dotted #000000;line-height: 1.5em;}
+#ta_shousai p{border: 0px solid #666666;margin: 0;padding: 10px;}
+
+#ta_shousai dl{border: 0px solid #666666;margin-bottom: 20px;}
+#ta_shousai dt{
+    border: 0px solid #666666;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+#ta_shousai dd{
+    border: 0px solid #666666;
+    padding: 10px 10px 10px 20px;
+    margin: 0 10px 20px 10px;
+}
+
+
+/*お知らせ詳細ページ　ここまで*/
+
+
+#topics_2015120201_table{
+    border: 0px solid #666666;border-collapse: collapse;
+    
+}
+#topics_2015120201_table td{
+    padding: 5px 10px;
+    border-bottom: 0px solid #666666;
+    font-size: 1.2em;
+}
+#topics_2015120201_table th{
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 1.2em;
+}
+.center_align span{color: red;}
+
+
+

@@ -1,0 +1,197 @@
+body {
+	background  : #fff;
+	color       : #660000;
+	font-family : "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size   : 90%;        
+        width                : 100%;
+	text-align           : center;
+	margin               : auto;
+	padding              : 0;
+}
+ 
+#container {
+}
+ 
+#header {
+	background-color : #466677;
+	color            : #FFFFFF;
+        padding: 10px 0;
+
+}
+
+h1 {
+	color     : #660000;
+	font-size : 18pt;
+}
+
+#content {
+	padding : 5px;
+        width: 960px;
+        margin: 0 auto;
+        border: 1px solid #666666;
+        overflow: auto;
+}
+
+
+
+ 
+
+
+#footer {
+	/*
+        text-align    : center;
+	color         : #990000;
+	border-bottom : 1px solid #990000;
+	padding       : 20px 10px 0px 0px;
+        */
+        
+        width: 100%;
+	height: 200px;
+	margin: 30px 0 0 0;
+	padding: 0;
+	float: left;
+	font-size: 12px;
+	color: #fff;
+	clear                : both;
+	box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.2) inset;
+	background: linear-gradient(#092847, #001E42);
+}
+#footer_main{
+        width: 960px;
+        margin: 10px auto;
+        text-align: left;
+}
+ 
+table {
+	width:90%;
+}
+
+td {
+	padding          : 2px 5px 2px 5px;
+	background-color : #FFFFFF;
+	color            : #660000;
+	border           : #ffeeee solid 2px;
+}
+
+pre {
+	background-color : #FFFFFF;
+	padding          : 5px 10px 5px 10px;
+	margin           : 10px 20px 10px 20px;
+}
+
+p.error {
+	color       : red;
+}
+
+/* トップページ */
+#header_area{
+        width: 100%;
+        height: 300px;
+        border: 1px solid #666666;
+        margin: 0;
+        padding: 0;
+}
+
+/* 右側のログインBOX */
+#form_box{
+        border: 1px solid #cccccc;
+        margin: 0px auto 20px auto;
+        width: 240px;
+        float: right;
+}
+#form_box_title{
+        background-color: #466677;
+        margin: 0 0 10px 0;
+        padding: 5px 0;
+        font-weight: bold;
+        color: #fff;
+}
+.f_b_login_area{
+        border: 0px solid #666666;
+        margin: 0;
+        padding: 0;
+        clear: both;
+        overflow: auto;
+}
+.f_b_login_area div{padding: 5px 5px 5px 8px;margin: 0;text-align: left;}
+.f_b_login_area span{display: block;float: left;width: 65px;margin: 2px 5px 0 0;font-size: 12px;}
+.f_b_login_area input{width: 150px;}
+#form_box input[type="submit"], #form_box input[type="button"]{
+        width: 105px;
+        margin: 10px 3px 10px 3px;
+        padding: 5px;
+        clear: both;
+}
+#idps_a{width: 96%;margin: 0 auto 10px auto;font-size: 12px;}
+#idps_a hr{border: 0.5px solid #cccccc;}
+#idps_a a{text-decoration: none;}
+#idps_a a:hover{text-decoration: underline;}
+ 
+ 
+ 
+/* 口座開設仮申請（入力） */
+#kari_form_info{
+    text-align: left;
+    border: 10px solid #466677;    
+    margin: 0;
+    padding: 10px;
+    color: #000000;
+}
+#form{
+        border: 0px solid #cccccc;
+        margin: 30px auto 0 auto;
+        width: 100%;
+}
+#horizontal {
+	/*border-bottom : 1px solid gray;
+	height        : 23px;
+	padding-top   : 5px;*/
+        
+        border-top: 1px solid #999999;
+        border-left: 1px solid #999999;
+        border-right: 1px solid #999999;
+        width: 650px;
+        margin: 20px auto 0 auto;
+        padding: 20px 0;
+        text-align: left;
+        
+}
+#horizontal2{
+        border-top: 1px dashed #999999;
+        border-left: 1px solid #999999;
+        border-right: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        width: 650px;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-align: left;    
+}
+
+#horizontal #label100 {
+	float : left;
+	width : 100px;
+}
+
+#horizontal #label200, #horizontal2 #label200 {
+	float: left;
+        margin: 0 20px 0 0;
+        width: 180px;
+        border: 0px solid #cccccc;
+        padding: 0px 0 0px 10px;
+}
+
+#horizontal input[type="text"], #horizontal2 input[type="text"]{
+    width: 250px;
+}
+
+#horizontal #label300 {
+	float : left;
+	width : 300px;
+}
+#kari_form_bt2{
+    width: 200px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+
